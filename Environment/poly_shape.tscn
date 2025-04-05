@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceaujjvceobtb"]
+
+[ext_resource type="Script" uid="uid://d1tunnu66vy0s" path="res://Environment/poly_shape.gd" id="1_ia5j6"]
+
+[node name="PolyShape" type="Polygon2D"]
+polygon = PackedVector2Array(-1, 3, -1, -7, -12, -7, -12, 3)
+script = ExtResource("1_ia5j6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
