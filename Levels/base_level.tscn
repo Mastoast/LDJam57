@@ -7,8 +7,10 @@
 [sub_resource type="GDScript" id="GDScript_n4mxg"]
 script/source = "extends Node2D
 
+@export var pitch:float = 1.0
+
 func _ready() -> void:
-	MusicPlayer.play(MusicPlayer.music_test)
+	MusicPlayer.play(MusicPlayer.music_test, pitch)
 "
 
 [node name="BaseLevel" type="Node2D"]
