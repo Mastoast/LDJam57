@@ -16,13 +16,14 @@ point_count = 3
 offsets = PackedFloat32Array(0.103261, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[node name="Node2D" type="Node2D"]
+[node name="ParticleBubble" type="Node2D"]
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 visibility_layer = 3
-position = Vector2(270, 65)
+emitting = false
 amount = 15
 texture = ExtResource("1_xgqlx")
+one_shot = true
 explosiveness = 0.85
 randomness = 0.5
 direction = Vector2(-1, -0.25)

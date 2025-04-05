@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://hmta8pq6weir"]
+[gd_scene load_steps=5 format=3 uid="uid://cirkva4eojwhw"]
 
 [ext_resource type="Texture2D" uid="uid://cph4e7q4enlfx" path="res://Assets/icon.svg" id="1_7vf5y"]
 [ext_resource type="Script" uid="uid://1jkvvmcd0wrd" path="res://Player/player.gd" id="1_axnn4"]
+[ext_resource type="PackedScene" uid="uid://dlopvuf4yujyn" path="res://Particles/ParticleBubble.tscn" id="3_btcbx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hvfyp"]
 radius = 15.0
@@ -24,5 +25,7 @@ position_smoothing_enabled = true
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
 one_shot = true
+
+[node name="ParticleBubble" parent="." instance=ExtResource("3_btcbx")]
 
 [connection signal="timeout" from="Timer" to="." method="_onDashFinished"]

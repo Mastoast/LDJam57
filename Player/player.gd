@@ -32,7 +32,8 @@ func _dash(dashForceMultiplier: float = 1, dashTime: float = 1) -> void:
 	currentDashForce = baseDashForce * dashForceMultiplier
 	$Timer.wait_time = dashTime * .8
 	$Timer.start()
-
+	$ParticleBubble/CPUParticles2D.restart()
+	
 func _onDashFinished() -> void:
 	Player_State = State.Idle
 #endregion

@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://3mgeoqkpfs6y"
-path="res://.godot/imported/boom_tchack.ogg-7608c966309b6b304cd25540838fc882.oggvorbisstr"
+path="res://.godot/imported/boom_tchack.ogg-20a2b5c757a2c4df32dfb923162ce91d.oggvorbisstr"
 
 [deps]
 
-source_file="res://assets/audio/musics/boom_tchack.ogg"
-dest_files=["res://.godot/imported/boom_tchack.ogg-7608c966309b6b304cd25540838fc882.oggvorbisstr"]
+source_file="res://Assets/audio/musics/boom_tchack.ogg"
+dest_files=["res://.godot/imported/boom_tchack.ogg-20a2b5c757a2c4df32dfb923162ce91d.oggvorbisstr"]
 
 [params]
 
