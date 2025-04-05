@@ -12,7 +12,8 @@ func _ready() -> void:
 
 func on_beat(beat_count:int):
 	if beat_count % 4 == 0:
-		move_ship.emit(player_big_dash)
-		emit_little_sonar.emit()
+		move_ship.emit(player_big_dash, MusicPlayer.beat_length)
+		emit_big_sonar.emit()
 	else:
-		move_ship.emit(player_dash)
+		move_ship.emit(player_dash, MusicPlayer.beat_length)
+		emit_little_sonar.emit()
