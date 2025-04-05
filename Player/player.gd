@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends AnimatableBody2D
 
 #region Variables
 @export
@@ -20,18 +20,18 @@ func _process(_delta: float) -> void:
 		Player_State = State.Dash
 		_dash()
 
-func _physics_process(_delta: float) -> void:
-	if Player_State == State.Dash:
-		if test_move(transform, Vector2.ZERO):
-			Player_State = State.Idle
-			position = latestPosition
+#func _physics_process(_delta: float) -> void:
+	#if Player_State == State.Dash:
+		#if test_move(transform, Vector2.ZERO):
+			#Player_State = State.Idle
+			#position = latestPosition
 
 func _dash(dashForceMultiplier: float = 1) -> void:
 	latestPosition = position
 	var tween = create_tween()
 	tween.set_process_mode(Tween.TWEEN_PROCESS_PHYSICS)
 	var targetPosition = position + baseDashForce * dashForceMultiplier * Vector2.from_angle(rotation)
-	tween.tween_property(self, "position", targetPosition, 1).set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN)
+	tween.tween_property(self, "position", targetPosition, 1)##.set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN)
 	tween.finished.connect(_onDashFinished)
 	tween.play()
 

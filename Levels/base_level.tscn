@@ -1,14 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://brtkqmlu6ql84"]
+[gd_scene load_steps=4 format=3 uid="uid://brtkqmlu6ql84"]
 
-[ext_resource type="PackedScene" uid="uid://hmta8pq6weir" path="res://Player/player.tscn" id="1_ujkqx"]
 [ext_resource type="PackedScene" uid="uid://ceaujjvceobtb" path="res://Environment/poly_shape.tscn" id="2_n4mxg"]
+[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
+[ext_resource type="PackedScene" uid="uid://bjlwmhyyp3s4i" path="res://Player/animatable_player.tscn" id="4_ruyyf"]
 
 [node name="BaseLevel" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_ujkqx")]
-position = Vector2(1, 0)
-baseDashForce = 1.0
 
 [node name="PolyShape" parent="." instance=ExtResource("2_n4mxg")]
 position = Vector2(-139, 182)
 polygon = PackedVector2Array(133, 3, 426, -95, 492, -204, 369, -152, 299, -74, 137, -16, -66, -25, -165, -286, 209, -359, 206, -402, -242, -346, -83, -2)
+
+[node name="AnimatablePlayer" parent="." instance=ExtResource("4_ruyyf")]
+
+[node name="MusicListener" parent="." instance=ExtResource("3_n4mxg")]
