@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpgr7a61ktboj"]
+
+[sub_resource type="GDScript" id="GDScript_6p0fx"]
+script/source = "extends Node2D
+
+func _ready() -> void:
+	MusicPlayer.play(MusicPlayer.music_test)
+"
+
+[node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_6p0fx")
