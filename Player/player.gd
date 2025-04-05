@@ -9,6 +9,9 @@ enum State {Idle, Scan, Dash}
 var Player_State : State = State.Idle
 
 var latestPosition : Vector2
+
+@export
+var moveCurve : Curve
 #endregion
 
 func _ready() -> void:
@@ -21,7 +24,7 @@ func _process(_delta: float) -> void:
 		_dash()
 
 func _physics_process(delta: float) -> void:
-	if Player_State == State.Dash && move_and_collide(currentDashForce * delta * Vector2.from_angle(rotation)):
+	if Player_State == State.Dash && move_and_collide(lerp(Vector2.ZERO, currentDashForce * delta * Vector2.from_angle(rotation), moveCurve.sample(1 / $Timer.time_left))):
 		Player_State = State.Idle
 		position = latestPosition
 

@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://hmta8pq6weir"]
+[gd_scene load_steps=5 format=3 uid="uid://hmta8pq6weir"]
 
 [ext_resource type="Texture2D" uid="uid://cph4e7q4enlfx" path="res://Assets/icon.svg" id="1_7vf5y"]
 [ext_resource type="Script" uid="uid://1jkvvmcd0wrd" path="res://Player/player.gd" id="1_axnn4"]
+
+[sub_resource type="Curve" id="Curve_4ntmi"]
+_data = [Vector2(0, 0), 0.0, 3.59762, 0, 0, Vector2(1, 1), 0.122279, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hvfyp"]
 radius = 15.0
@@ -9,6 +13,7 @@ radius = 15.0
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_axnn4")
+moveCurve = SubResource("Curve_4ntmi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.234244, 0.234244)
