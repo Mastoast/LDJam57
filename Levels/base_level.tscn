@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://brtkqmlu6ql84"]
 
-[ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="1_ujkqx"]
+[ext_resource type="PackedScene" uid="uid://hmta8pq6weir" path="res://Player/player.tscn" id="1_ujkqx"]
 [ext_resource type="PackedScene" uid="uid://ceaujjvceobtb" path="res://Environment/poly_shape.tscn" id="2_n4mxg"]
 
 [node name="BaseLevel" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ujkqx")]
 position = Vector2(1, 0)
+baseDashForce = 100.0
 
 [node name="PolyShape" parent="." instance=ExtResource("2_n4mxg")]
 position = Vector2(-139, 182)
