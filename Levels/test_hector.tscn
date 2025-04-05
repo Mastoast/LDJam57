@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpgr7a61ktboj"]
+[gd_scene load_steps=3 format=3 uid="uid://dpgr7a61ktboj"]
+
+[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="1_l7kbo"]
 
 [sub_resource type="GDScript" id="GDScript_6p0fx"]
 script/source = "extends Node2D
@@ -9,3 +11,5 @@ func _ready() -> void:
 
 [node name="Node2D" type="Node2D"]
 script = SubResource("GDScript_6p0fx")
+
+[node name="MusicListener" parent="." instance=ExtResource("1_l7kbo")]
