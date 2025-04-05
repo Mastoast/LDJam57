@@ -4,8 +4,8 @@ signal move_ship
 signal emit_little_sonar
 signal emit_big_sonar
 
-@export var player_dash: int = 10
-@export var player_big_dash: int = 20
+@export var player_dash: float = 10
+@export var player_big_dash: float = 20
 
 func _ready() -> void:
 	MusicPlayer.new_beat.connect(on_beat)
