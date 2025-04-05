@@ -9,4 +9,5 @@
 position = Vector2(1, 0)
 
 [node name="PolyShape" parent="." instance=ExtResource("2_n4mxg")]
-position = Vector2(-43, -2)
+position = Vector2(-139, 182)
+polygon = PackedVector2Array(133, 3, 426, -95, 492, -204, 369, -152, 299, -74, 137, -16, -66, -25, -165, -286, 209, -359, 206, -402, -242, -346, -83, -2)
