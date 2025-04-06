@@ -1,18 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://cirkva4eojwhw"]
+[gd_scene load_steps=7 format=3 uid="uid://cirkva4eojwhw"]
 
 [ext_resource type="Script" uid="uid://1jkvvmcd0wrd" path="res://Player/player.gd" id="1_axnn4"]
 [ext_resource type="Texture2D" uid="uid://dgdk1nodh2edr" path="res://Assets/sous-marin.png" id="2_gwnis"]
 [ext_resource type="PackedScene" uid="uid://dlopvuf4yujyn" path="res://Particles/ParticleBubble.tscn" id="3_btcbx"]
 [ext_resource type="PackedScene" uid="uid://ti6gbyf1t2hf" path="res://Particles/ParticleCollisionWall.tscn" id="4_gwnis"]
 [ext_resource type="PackedScene" uid="uid://bsl7wwpvm0xgy" path="res://Particles/TEST TRAIL.tscn" id="5_k53q1"]
-[ext_resource type="Texture2D" uid="uid://bcqpsikryxolx" path="res://Materials/circle-16.png" id="6_fhl08"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hvfyp"]
-radius = 19.0
-height = 72.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwnis"]
-radius = 21.0
+radius = 21.0238
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 motion_mode = 1
@@ -23,12 +18,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_gwnis")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-5, -4)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_hvfyp")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(19, 1)
+position = Vector2(18, 1)
 shape = SubResource("CircleShape2D_gwnis")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -49,7 +39,6 @@ position = Vector2(-1, 1)
 
 [node name="Trail" parent="Marker2D" instance=ExtResource("5_k53q1")]
 points = PackedVector2Array(0, 0)
-texture = ExtResource("6_fhl08")
 texture_mode = 2
 script = null
 
