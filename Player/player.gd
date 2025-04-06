@@ -2,8 +2,7 @@ extends CharacterBody2D
 class_name _Player
 
 #region Variables
-@export
-var baseDashForce : float = 1
+@export var baseDashForce : float = 1
 var currentDashForce : float
 
 enum State {Idle, Scan, Dash}

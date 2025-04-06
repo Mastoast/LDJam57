@@ -18,4 +18,3 @@ material = ExtResource("1_nr8ra")
 scale = Vector2(50, 50)
 mesh = SubResource("QuadMesh_j3xrb")
 script = ExtResource("2_veujg")
-speed = null
