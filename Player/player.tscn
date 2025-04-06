@@ -10,7 +10,8 @@ point_count = 2
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hvfyp"]
 radius = 15.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+use_parent_material = true
 motion_mode = 1
 script = ExtResource("1_axnn4")
 moveCurve = SubResource("Curve_4ntmi")
@@ -29,5 +30,9 @@ position_smoothing_enabled = true
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
 one_shot = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+texture = ExtResource("1_7vf5y")
 
 [connection signal="timeout" from="Timer" to="." method="_onDashFinished"]

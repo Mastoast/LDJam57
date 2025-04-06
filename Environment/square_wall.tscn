@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://utdc0onf3id2"]
+
+[ext_resource type="Material" uid="uid://cpd1lmu1c45sj" path="res://Materials/sonar2D.tres" id="1_nr8ra"]
+[ext_resource type="Script" uid="uid://qqfhydc5ltjf" path="res://Levels/meshScan.gd" id="2_veujg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1e4t"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_j3xrb"]
+
+[node name="SquareWall" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_m1e4t")
+
+[node name="Square" type="MeshInstance2D" parent="."]
+material = ExtResource("1_nr8ra")
+scale = Vector2(50, 50)
+mesh = SubResource("QuadMesh_j3xrb")
+script = ExtResource("2_veujg")
+speed = null

@@ -1,8 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://brtkqmlu6ql84"]
+[gd_scene load_steps=10 format=3 uid="uid://brtkqmlu6ql84"]
 
 [ext_resource type="PackedScene" uid="uid://ceaujjvceobtb" path="res://Environment/poly_shape.tscn" id="2_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://hmta8pq6weir" path="res://Player/player.tscn" id="3_ruyyf"]
+[ext_resource type="Material" uid="uid://cpd1lmu1c45sj" path="res://Materials/sonar2D.tres" id="5_5y487"]
+[ext_resource type="Script" uid="uid://qqfhydc5ltjf" path="res://Levels/meshScan.gd" id="5_j3xrb"]
+[ext_resource type="PackedScene" uid="uid://utdc0onf3id2" path="res://Environment/square_wall.tscn" id="6_j3xrb"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n4mxg"]
+light_mode = 2
 
 [sub_resource type="GDScript" id="GDScript_n4mxg"]
 script/source = "extends Node2D
@@ -11,10 +17,16 @@ func _ready() -> void:
 	MusicPlayer.play(MusicPlayer.music_test)
 "
 
-[node name="BaseLevel" type="Node2D"]
+[sub_resource type="QuadMesh" id="QuadMesh_m1e4t"]
+size = Vector2(1200, 1200)
+
+[node name="BaseLevel" type="Node2D" groups=["Player"]]
+material = SubResource("CanvasItemMaterial_n4mxg")
 script = SubResource("GDScript_n4mxg")
 
 [node name="PolyShape" parent="." instance=ExtResource("2_n4mxg")]
+visible = false
+use_parent_material = true
 position = Vector2(-139, 182)
 polygon = PackedVector2Array(133, 3, 426, -95, 492, -204, 369, -152, 299, -74, 137, -16, -66, -25, -165, -286, 209, -359, 206, -402, -242, -346, -83, -2)
 
@@ -24,5 +36,80 @@ player_big_dash = 2.0
 
 [node name="Player" parent="." instance=ExtResource("3_ruyyf")]
 baseDashForce = 200.0
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+visible = false
+material = ExtResource("5_5y487")
+mesh = SubResource("QuadMesh_m1e4t")
+script = ExtResource("5_j3xrb")
+
+[node name="SquareWall" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-31, 290)
+
+[node name="SquareWall2" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-85, 291)
+
+[node name="SquareWall3" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-148, 290)
+
+[node name="SquareWall4" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-210, 269)
+
+[node name="SquareWall5" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-266, 213)
+
+[node name="SquareWall6" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-309, 145)
+
+[node name="SquareWall7" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-341, 68)
+
+[node name="SquareWall8" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-356, 5)
+
+[node name="SquareWall9" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-362, -78)
+
+[node name="SquareWall10" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-307, -137)
+
+[node name="SquareWall11" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-206, -171)
+
+[node name="SquareWall12" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-126, -197)
+
+[node name="SquareWall13" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(-22, -208)
+
+[node name="SquareWall14" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(70, -203)
+
+[node name="SquareWall15" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(140, -193)
+
+[node name="SquareWall16" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(238, -143)
+
+[node name="SquareWall17" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(304, -77)
+
+[node name="SquareWall18" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(79, 275)
+
+[node name="SquareWall19" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(175, 275)
+
+[node name="SquareWall20" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(237, 215)
+
+[node name="SquareWall21" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(292, 154)
+
+[node name="SquareWall22" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(364, 116)
+
+[node name="SquareWall23" parent="." instance=ExtResource("6_j3xrb")]
+position = Vector2(382, -51)
 
 [connection signal="move_ship" from="MusicListener" to="Player" method="_dash"]

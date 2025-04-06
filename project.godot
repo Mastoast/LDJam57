@@ -19,7 +19,12 @@ config/icon="res://Assets/icon.svg"
 
 MusicPlayer="*res://Singletons/MusicPlayer.gd"
 
+[global_group]
+
+Player="Player"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

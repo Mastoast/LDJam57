@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name _Player
 
 #region Variables
 @export
@@ -12,6 +13,10 @@ var latestPosition : Vector2
 
 @export
 var moveCurve : Curve
+#endregion
+
+#region SIGNALS
+var sendSonarWithTime : Signal
 #endregion
 
 func _ready() -> void:
