@@ -18,7 +18,7 @@ var beat_count
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	if player != null and player.playing:
 		if player.get_playback_position() < last_player_position:
 			loop_count += 1
@@ -54,8 +54,7 @@ func resume():
 	player.play((beat_count - 1) * beat_length)
 
 func get_player_total_position():
-	return player.stream.get_length() * loop_count + player.get_playback_position()
-	+ AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
+	return player.stream.get_length() * loop_count + player.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
 
 func get_next_beat_time():
 	return beat_count * beat_length

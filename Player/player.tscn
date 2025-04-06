@@ -7,25 +7,28 @@
 [ext_resource type="PackedScene" uid="uid://bsl7wwpvm0xgy" path="res://Particles/TEST TRAIL.tscn" id="5_k53q1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hvfyp"]
-radius = 37.0
-height = 162.0
+radius = 19.0
+height = 72.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwnis"]
-radius = 48.0
+radius = 21.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_axnn4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.234244, 0.234244)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_gwnis")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-5, -9)
+position = Vector2(-5, -4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_hvfyp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(19, 1)
+shape = SubResource("CircleShape2D_gwnis")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_callback = 0
@@ -39,11 +42,6 @@ one_shot = true
 position = Vector2(-93, -13)
 
 [node name="ParticleCollisionWall" parent="." instance=ExtResource("4_gwnis")]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(42, 2)
-shape = SubResource("CircleShape2D_gwnis")
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(-1, 1)

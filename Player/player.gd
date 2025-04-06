@@ -12,10 +12,13 @@ var Player_State : State = State.Idle
 var latestPosition : Vector2
 
 var particleCollision = load("res://Particles/ParticleCollisionWall.tscn")
+
+var sonarEmissionTime = 2.0
 #endregion
 
 #region SIGNALS
-var sendSonarWithTime : Signal
+signal setSonarPulseTime
+signal sendSonarWithTime
 #endregion
 
 func _ready() -> void:
@@ -25,12 +28,11 @@ func _process(_delta: float) -> void:
 	if (Player_State == State.Idle):
 		look_at(get_global_mouse_position())
 	if Input.is_action_just_pressed("ui_select") && Player_State != State.Dash: ## dash debug
-		_dash()
-func _get_position():
-	return get_parent().position
+		_onSonar()
+		
 func _physics_process(delta: float) -> void:
-	velocity = Input.get_vector("ui_left", "ui_right","ui_up", "ui_down") *150
-	move_and_slide()
+	#velocity = Input.get_vector("ui_left", "ui_right","ui_up", "ui_down") * 150
+	#move_and_slide()
 	if Player_State == State.Dash:
 		var collision = move_and_collide(currentDashForce * delta * Vector2.from_angle(rotation))
 		if collision:
@@ -41,6 +43,9 @@ func _physics_process(delta: float) -> void:
 			newParticle.restart()
 			position = latestPosition
 	 
+func _get_position():
+	return get_parent().position
+	
 #region DASH
 func _dash(dashForceMultiplier: float = 1, dashTime: float = 1) -> void:
 	Player_State = State.Dash
@@ -52,13 +57,19 @@ func _dash(dashForceMultiplier: float = 1, dashTime: float = 1) -> void:
 	
 func _onDashFinished() -> void:
 	Player_State = State.Idle
-	_onSonar()
 #endregion
 
 #region SONAR#
-func _onSonar() -> void:
-	var tween = create_tween()
-	tween.tween_method(sendSonarWithTime.emit, 0.0, 1.0, get_process_delta_time() * 100.0)
-	tween.connect("finished", func(): sendSonarWithTime.emit(-1))
-	tween.play()
+var sonarTween: Tween
+
+func _onBigSonar() -> void: _onSonar(.5)
+
+func _onSonar(speedMult : float = 1) -> void:
+	var timer = sonarEmissionTime * speedMult
+	setSonarPulseTime.emit(timer)
+	if sonarTween: sonarTween.kill()
+	sonarTween = create_tween()
+	sonarTween.tween_method(sendSonarWithTime.emit, 0.0, timer, timer)
+	sonarTween.connect("finished", func(): sendSonarWithTime.emit(-1))
+	sonarTween.play()
 #endregion
