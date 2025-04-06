@@ -1,4 +1,4 @@
-extends MeshInstance2D
+extends Node2D
 
 # Get the reference to the material to pass data to shader parameters.
 @onready var SHADER: ShaderMaterial = self.material
@@ -9,7 +9,6 @@ func _ready():
 	player = get_tree().root.get_node("BaseLevel/Player")
 	player.sendSonarWithTime.connect(_processSonarTime)
 	player.setSonarPulseTime.connect(_setSonarPulseTime)
-
 func _process(_delta):
 	SHADER.set_shader_parameter("player_position", player.global_position)
 
