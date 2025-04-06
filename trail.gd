@@ -19,4 +19,4 @@ func _process(_delta):
 		add_point(point)
  
 func _get_position():
-	return get_global_mouse_position()
+	return get_parent().global_position
