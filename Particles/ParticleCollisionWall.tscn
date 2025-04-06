@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ti6gbyf1t2hf"]
+[gd_scene load_steps=5 format=3 uid="uid://ti6gbyf1t2hf"]
 
 [ext_resource type="Texture2D" uid="uid://c8s3sirtpx8r1" path="res://Assets/rubble.png" id="1_rjcq7"]
+[ext_resource type="Script" uid="uid://c646ddpdmigpw" path="res://Particles/particle_collision_wall.gd" id="2_lxcxp"]
 
 [sub_resource type="Curve" id="Curve_lxcxp"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.738981), 0.0, 0.0, 0, 0]
@@ -11,8 +12,10 @@ offsets = PackedFloat32Array(0, 0.997283)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="CPUParticles2D" type="CPUParticles2D"]
+emitting = false
 amount = 3
 texture = ExtResource("1_rjcq7")
+one_shot = true
 speed_scale = 2.0
 explosiveness = 1.0
 lifetime_randomness = 0.1
@@ -27,3 +30,6 @@ angle_max = 90.0
 scale_amount_min = 0.5
 scale_amount_curve = SubResource("Curve_lxcxp")
 color_ramp = SubResource("Gradient_j10t5")
+script = ExtResource("2_lxcxp")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

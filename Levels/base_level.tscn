@@ -13,8 +13,10 @@ light_mode = 2
 [sub_resource type="GDScript" id="GDScript_n4mxg"]
 script/source = "extends Node2D
 
+@export var pitch:float = 1.0
+
 func _ready() -> void:
-	MusicPlayer.play(MusicPlayer.music_test)
+	MusicPlayer.play(MusicPlayer.music_test, pitch)
 "
 
 [sub_resource type="QuadMesh" id="QuadMesh_m1e4t"]
