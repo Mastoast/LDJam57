@@ -13,8 +13,12 @@ var is_running := false
 
 func _ready():
 	player = get_tree().get_nodes_in_group("Player")[0]
-	(player as _Player).
+	print_debug(player.name)
+	(player as _Player).sendSonarWithTime.connect(_processSonarTime)
 
 func _process(_delta):
 	SHADER.set_shader_parameter("player_position", player.global_position)
 	##SHADER.set_shader_parameter("max_distance", max_distance)
+
+func _processSonarTime(delta):
+	SHADER.set_shader_parameter("time", delta)

@@ -41,7 +41,6 @@ func _physics_process(delta: float) -> void:
 			newParticle.restart()
 			position = latestPosition
 	 
-
 #region DASH
 func _dash(dashForceMultiplier: float = 1, dashTime: float = 1) -> void:
 	Player_State = State.Dash
@@ -53,4 +52,13 @@ func _dash(dashForceMultiplier: float = 1, dashTime: float = 1) -> void:
 	
 func _onDashFinished() -> void:
 	Player_State = State.Idle
+	_onSonar()
+#endregion
+
+#region SONAR#
+func _onSonar() -> void:
+	var tween = create_tween()
+	tween.tween_method(sendSonarWithTime.emit, 0.0, 1.0, get_process_delta_time() * 100.0)
+	tween.connect("finished", func(): sendSonarWithTime.emit(-1))
+	tween.play()
 #endregion
