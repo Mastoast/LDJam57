@@ -13,6 +13,9 @@ var latestPosition : Vector2
 var particleCollision = load("res://Particles/ParticleCollisionWall.tscn")
 
 var sonarEmissionTime = 2.0
+
+var sonarLight = load("res://Player/light_scan_fx.tscn")
+##@export var sonarLightBack : PointLight2D
 #endregion
 
 #region SIGNALS
@@ -59,16 +62,30 @@ func _onDashFinished() -> void:
 #endregion
 
 #region SONAR#
-var sonarTween: Tween
-
 func _onBigSonar() -> void: _onSonar(.5)
 
 func _onSonar(speedMult : float = 1) -> void:
 	var timer = sonarEmissionTime * speedMult
+	
+	var sL = sonarLight.instantiate()
+	get_parent().add_child(sL)
+	sL.global_position = global_position
+	
+	var sonarTween = create_tween()
+	sL.scale = Vector2.ZERO
+	sonarTween.tween_property(sL, "scale", Vector2(1.0, 1.0), .3 * timer)
+	var lightForWalls = sL.get_child(0) as PointLight2D
+	var lightBack = sL.get_child(1) as PointLight2D
+	sonarTween.tween_property(lightBack, "texture_scale", 50, .7 * timer)
+	sonarTween.parallel().tween_property(lightForWalls, "texture_scale", 0, .7 * timer)
+	sonarTween.connect("finished", func() -> void: sL.queue_free())
+	
+	var sonarPulseTween = create_tween()
 	setSonarPulseTime.emit(timer)
-	if sonarTween: sonarTween.kill()
-	sonarTween = create_tween()
-	sonarTween.tween_method(sendSonarWithTime.emit, 0.0, timer, timer)
-	sonarTween.connect("finished", func(): sendSonarWithTime.emit(-1))
+	sonarPulseTween.tween_method(sendSonarWithTime.emit, 0.0, timer, timer) ## object based shader fx
+	sonarPulseTween.connect("finished", func() -> void: sendSonarWithTime.emit(-1.0))
+	
 	sonarTween.play()
+	sonarPulseTween.play()
+	
 #endregion

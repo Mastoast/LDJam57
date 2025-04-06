@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbdarstugxufp"]
+
+[ext_resource type="Texture2D" uid="uid://bvmlquuyjn02t" path="res://Assets/radialGradient.tres" id="1_p5tlt"]
+
+[node name="PointLight2D" type="PointLight2D"]
+visible = false
+energy = 10.0
+blend_mode = 2
+shadow_enabled = true
+texture = ExtResource("1_p5tlt")
+texture_scale = 20.0

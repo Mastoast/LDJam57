@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://jryiame3igna"]
+
+[ext_resource type="PackedScene" uid="uid://bbdarstugxufp" path="res://Player/point_light_2d.tscn" id="1_d2naj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PointLight2D" parent="." instance=ExtResource("1_d2naj")]
+visible = true
+energy = 16.0
+texture_scale = 15.0
+
+[node name="PointLight2DBack" parent="." instance=ExtResource("1_d2naj")]
+visible = true
+energy = 16.0
+range_item_cull_mask = 4
+shadow_item_cull_mask = 5
+texture_scale = 15.0
