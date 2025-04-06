@@ -4,6 +4,8 @@ var player:AudioStreamPlayer
 var playerName = "music_player"
 
 var music_test = load("res://assets/audio/musics/boom_tchack.ogg")
+var music_80bpm = load("res://Assets/audio/musics/music_80bpm.ogg")
+var music_glitchy = load("res://Assets/audio/musics/music_glitchy.ogg")
 
 signal new_beat
 

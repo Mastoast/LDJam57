@@ -19,7 +19,7 @@ script/source = "extends Node2D
 @export var pitch:float = 1.0
 
 func _ready() -> void:
-	MusicPlayer.play(MusicPlayer.music_test, pitch)
+	MusicPlayer.play(MusicPlayer.music_80bpm, pitch)
 "
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_m1e4t"]
@@ -42,7 +42,6 @@ _surfaces = [{
 [node name="BaseLevel" type="Node2D"]
 material = SubResource("CanvasItemMaterial_n4mxg")
 script = SubResource("GDScript_n4mxg")
-pitch = 0.5
 
 [node name="MusicListener" parent="." instance=ExtResource("3_n4mxg")]
 player_dash = 1.0
