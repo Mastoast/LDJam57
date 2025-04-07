@@ -29,6 +29,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if (Player_State == State.Idle):
 		look_at(get_global_mouse_position())
+		var current_rotation_degrees = fmod(rotation_degrees, 360)
+		$Sprite2D.flip_v = current_rotation_degrees > 90 and current_rotation_degrees < 270
 	if Input.is_action_just_pressed("ui_select") && Player_State != State.Dash: ## dash debug
 		_onSonar()
 		
