@@ -68,7 +68,7 @@ func _onDashFinished() -> void:
 
 func _onBigSonar(speedMult : float) -> void: _processOnSonar(true, speedMult)
 
-func _onSonar(speedMult : float) -> void: _processOnSonar(false, 1)
+func _onSonar(speedMult : float) -> void: _processOnSonar(false, speedMult)
 
 func _processOnSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
 	var timer = sonarEmissionTime * speedMult

@@ -17,5 +17,5 @@ visible = true
 z_index = -1
 energy = 1.0
 range_item_cull_mask = 4
-shadow_item_cull_mask = 7
+shadow_item_cull_mask = 4
 texture_scale = 15.0
