@@ -1,12 +1,12 @@
 [gd_scene load_steps=14 format=4 uid="uid://brtkqmlu6ql84"]
 
-[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
+[ext_resource type="PackedScene" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="3_ruyyf"]
-[ext_resource type="PackedScene" uid="uid://jryiame3igna" path="res://Player/light_scan_fx.tscn" id="6_5y487"]
+[ext_resource type="PackedScene" path="res://Player/light_scan_fx.tscn" id="6_5y487"]
 [ext_resource type="Texture2D" uid="uid://crvoofbojx1ae" path="res://Assets/lightGradient.tres" id="6_j3xrb"]
 [ext_resource type="Material" uid="uid://cpd1lmu1c45sj" path="res://Materials/sonar2D.tres" id="7_jg3su"]
 [ext_resource type="Texture2D" uid="uid://cc0u75l8x3m0n" path="res://Assets/circle for particle.png" id="8_npxkb"]
-[ext_resource type="Texture2D" uid="uid://bwst5seg5sxcp" path="res://Assets/flatWhite.tres" id="8_u1nwe"]
+[ext_resource type="Texture2D" uid="uid://cwvh8n6uxe04q" path="res://Assets/flatWhite.tres" id="8_u1nwe"]
 [ext_resource type="Script" uid="uid://qqfhydc5ltjf" path="res://Levels/meshScan.gd" id="9_6jk1m"]
 [ext_resource type="Texture2D" uid="uid://vn6xthqbb5iu" path="res://Assets/1.jpg" id="9_jg3su"]
 
@@ -42,6 +42,7 @@ _surfaces = [{
 [node name="BaseLevel" type="Node2D"]
 material = SubResource("CanvasItemMaterial_n4mxg")
 script = SubResource("GDScript_n4mxg")
+pitch = 0.5
 
 [node name="MusicListener" parent="." instance=ExtResource("3_n4mxg")]
 player_dash = 1.0

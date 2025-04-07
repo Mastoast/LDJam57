@@ -30,12 +30,12 @@ process_callback = 0
 one_shot = true
 
 [node name="ParticleBubble" parent="." instance=ExtResource("3_btcbx")]
-position = Vector2(-93, -13)
+position = Vector2(-39, -4)
 
 [node name="ParticleCollisionWall" parent="." instance=ExtResource("4_gwnis")]
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(-1, 1)
+position = Vector2(-34, -4)
 
 [node name="Trail" parent="Marker2D" instance=ExtResource("5_k53q1")]
 points = PackedVector2Array(0, 0)
