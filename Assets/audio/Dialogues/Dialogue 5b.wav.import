@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://k5sivonkxshj"
+path="res://.godot/imported/Dialogue 5b.wav-e661668a9dcbd8609b747925bd2dac3e.sample"
+
+[deps]
+
+source_file="res://Assets/audio/Dialogues/Dialogue 5b.wav"
+dest_files=["res://.godot/imported/Dialogue 5b.wav-e661668a9dcbd8609b747925bd2dac3e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
