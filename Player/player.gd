@@ -104,7 +104,7 @@ func _processOnSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
 	
 	var sonarPulseTween = create_tween()
 	setSonarPulseTime.emit(timer)
-	sonarPulseTween.tween_method(sendSonarWithTime.emit, 0.0, timer * .8, timer * .8) ## object based shader fx
+	sonarPulseTween.tween_method(sendSonarWithTime.emit, 0.0, timer * .6, timer * .6) ## object based shader fx
 	sonarPulseTween.connect("finished", func() -> void: sendSonarWithTime.emit(-1.0))
 	
 	sonarTween.play()
