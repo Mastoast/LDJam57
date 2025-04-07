@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bbdarstugxufp" path="res://Player/point_light_2d.tscn" id="1_d2naj"]
 [ext_resource type="Texture2D" uid="uid://mpo86iuvmtbp" path="res://Assets/Textures/radialGradientOpaque.tres" id="2_fu05g"]
 
-[node name="Node2D" type="Node2D"]
+[node name="LightScan1" type="Node2D"]
 
 [node name="PointLight2DWalls" parent="." instance=ExtResource("1_d2naj")]
 visible = true
