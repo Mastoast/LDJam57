@@ -13,14 +13,17 @@ config_version=5
 config/name="LDJam57"
 run/main_scene="uid://brtkqmlu6ql84"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://Assets/icon.svg"
+config/icon="res://Assets/Textures/icon.svg"
 
 [autoload]
 
 MusicPlayer="*res://Singletons/MusicPlayer.gd"
+Player="*res://Player/player.gd"
 
 [display]
 
+window/size/viewport_width=1800
+window/size/viewport_height=1100
 window/stretch/mode="viewport"
 
 [global_group]

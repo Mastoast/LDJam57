@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://utdc0onf3id2"]
 
-[ext_resource type="Material" uid="uid://cpd1lmu1c45sj" path="res://Materials/sonar2D.tres" id="1_nr8ra"]
+[ext_resource type="Material" uid="uid://cpd1lmu1c45sj" path="res://Assets/Materials/sonar2D.tres" id="1_nr8ra"]
 [ext_resource type="Script" uid="uid://qqfhydc5ltjf" path="res://Levels/meshScan.gd" id="2_veujg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m1e4t"]

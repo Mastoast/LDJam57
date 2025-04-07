@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="1_l7kbo"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="2_q0lvo"]
-[ext_resource type="Texture2D" uid="uid://stk65n1r0vkw" path="res://Assets/transparent_circle.png" id="3_dcuiy"]
+[ext_resource type="Texture2D" uid="uid://stk65n1r0vkw" path="res://Assets/Textures/transparent_circle.png" id="3_dcuiy"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0lvo"]
 light_mode = 2
