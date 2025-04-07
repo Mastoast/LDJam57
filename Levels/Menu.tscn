@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://nylpp1ynvhvq"]
+
+[ext_resource type="Texture2D" uid="uid://coln5micxyums" path="res://Assets/Textures/écran titre2.png" id="1_bdpv0"]
+[ext_resource type="Texture2D" uid="uid://dsx23ph4yata8" path="res://Assets/Textures/écran titre.png" id="2_8t5nu"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="ÉcranTitre2" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_bdpv0")
+
+[node name="ÉcranTitre" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_8t5nu")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 46.0
+offset_top = 884.0
+offset_right = 936.0
+offset_bottom = 1072.0
+text = "Press any key to start"
