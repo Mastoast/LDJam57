@@ -35,34 +35,34 @@ func load_main_menu():
 func _on_first_sonar_activation(body: Node2D):
 	if body.is_in_group("Player"):
 		$AnimationPlayer.play("base_level/unlock_sonar")
-		#$"Dialogue boxes/Dialogue 2 trigger/CollisionShape2D".disabled = true
+		$"Dialogue boxes/Dialogue 2 trigger".collision_mask = 0
 
 func _on_dialogue_3(body: Node2D):
 	if body.is_in_group("Player"):
 		$DialogueAudioStreamPlayer.stream = dialogue3
 		$DialogueAudioStreamPlayer.play()
-		#$"Dialogue boxes/Dialogue 3 trigger/CollisionShape2D".disabled = true
+		$"Dialogue boxes/Dialogue 3 trigger".collision_mask = 0
 
 func _on_dialogue_4(body: Node2D):
 	if body.is_in_group("Player"):
 		$DialogueAudioStreamPlayer.stream = dialogue4
 		$DialogueAudioStreamPlayer.play()
-		#$"Dialogue boxes/Dialogue 4 trigger/CollisionShape2D".disabled = true
+		$"Dialogue boxes/Dialogue 4 trigger".collision_mask = 0
 
 func _on_second_sonar_activation(body: Node2D):
 	if body.is_in_group("Player"):
 		MusicPlayer.stop()
 		$AnimationPlayer.play("base_level/unlock_organic_sonar")
-		#$"Dialogue boxes/Dialogue 5 trigger/CollisionShape2D".disabled = true
+		$"Dialogue boxes/Dialogue 5 trigger".collision_mask = 0
 
 func _on_dialogue_6(body: Node2D):
 	if body.is_in_group("Player"):
 		$DialogueAudioStreamPlayer.stream = dialogue6
 		$DialogueAudioStreamPlayer.play()
-		#$"Dialogue boxes/Dialogue 6 trigger/CollisionShape2D".disabled = true
+		$"Dialogue boxes/Dialogue 6 trigger".collision_mask = 0
 
 func _on_end_cutscene_trigger(body: Node2D):
 	if body.is_in_group("Player"):
 		MusicPlayer.stop()
 		$AnimationPlayer.play("base_level/final_cutscene")
-		#$"Dialogue boxes/Dialogue 7 trigger/CollisionShape2D".disabled = true
+		$"Dialogue boxes/Dialogue 7 trigger".collision_mask = 0
