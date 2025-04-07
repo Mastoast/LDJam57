@@ -1,8 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://brtkqmlu6ql84"]
+[gd_scene load_steps=22 format=3 uid="uid://brtkqmlu6ql84"]
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
-[ext_resource type="PackedScene" uid="uid://bq38f2ek6wl00" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
-[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
+[ext_resource type="PackedScene" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
+[ext_resource type="PackedScene" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="3_ruyyf"]
 [ext_resource type="PackedScene" uid="uid://bjpcwi3pflktf" path="res://Levels/map.tscn" id="6_6jk1m"]
 [ext_resource type="Texture2D" uid="uid://20yxdlcmgsxg" path="res://Assets/Textures/map/map_fond.png" id="7_npxkb"]
@@ -41,42 +41,33 @@ size = Vector2(5374, 2461)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x3nl1"]
 size = Vector2(5374, 2543)
 
-[sub_resource type="Animation" id="Animation_wf03h"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Player:generic_sonar_enabled")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Player:organic_sonar_enabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wf03h"]
-_data = {
-&"RESET": SubResource("Animation_wf03h")
-}
 
 [node name="BaseLevel" type="Node2D"]
+modulate = Color(1, 0, 0, 0)
 material = SubResource("CanvasItemMaterial_n4mxg")
 script = ExtResource("1_2kef7")
 intro_enabled = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelCharacter1" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -248.0
+offset_top = -277.0
+offset_right = 213.0
+offset_bottom = -223.0
+
+[node name="LabelCharacter2" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = -193.0
+offset_top = -230.0
+offset_right = 224.0
+offset_bottom = -170.0
 
 [node name="DialogueAudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1462, 3910)

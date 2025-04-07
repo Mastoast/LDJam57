@@ -54,6 +54,7 @@ func _on_second_sonar_activation(body: Node2D):
 		MusicPlayer.stop()
 		$AnimationPlayer.play("base_level/unlock_organic_sonar")
 		$"Dialogue boxes/Dialogue 5 trigger".collision_mask = 0
+		$MusicListener.music_index = 2
 
 func _on_dialogue_6(body: Node2D):
 	if body.is_in_group("Player"):
@@ -67,3 +68,7 @@ func _on_end_cutscene_trigger(body: Node2D):
 		MusicPlayer.stop()
 		$AnimationPlayer.play("base_level/final_cutscene")
 		$"Dialogue boxes/Dialogue 7 trigger".collision_mask = 0
+
+func _write_text(text, label_name):
+	var get_label = get_node("control/"+label_name)
+	

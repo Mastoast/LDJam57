@@ -133,4 +133,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_fhl08")
 }
 
+[node name="FishMarker" type="Marker2D" parent="."]
+position = Vector2(-284, 72)
+
 [connection signal="timeout" from="Timer" to="." method="_onDashFinished"]
