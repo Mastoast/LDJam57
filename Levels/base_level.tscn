@@ -1,17 +1,17 @@
 [gd_scene load_steps=25 format=4 uid="uid://brtkqmlu6ql84"]
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
-[ext_resource type="PackedScene" path="res://Player/music_listener.tscn" id="3_n4mxg"]
+[ext_resource type="PackedScene" uid="uid://bq38f2ek6wl00" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
+[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="3_ruyyf"]
-[ext_resource type="PackedScene" path="res://Levels/map.tscn" id="6_6jk1m"]
-[ext_resource type="Texture2D" uid="uid://crvoofbojx1ae" path="res://Assets/Textures/lightGradient.tres" id="6_j3xrb"]
+[ext_resource type="PackedScene" uid="uid://bjpcwi3pflktf" path="res://Levels/map.tscn" id="6_6jk1m"]
 [ext_resource type="Material" uid="uid://cpd1lmu1c45sj" path="res://Assets/Materials/sonar2D.tres" id="7_jg3su"]
+[ext_resource type="Texture2D" uid="uid://20yxdlcmgsxg" path="res://Assets/Textures/map/map_fond.png" id="7_npxkb"]
 [ext_resource type="Texture2D" uid="uid://cc0u75l8x3m0n" path="res://Assets/Textures/circle for particle.png" id="8_npxkb"]
 [ext_resource type="Script" uid="uid://qqfhydc5ltjf" path="res://Levels/meshScan.gd" id="9_6jk1m"]
-[ext_resource type="Texture2D" uid="uid://b51yi2sl2icsl" path="res://Assets/Textures/skyGradient.tres" id="11_6jk1m"]
-[ext_resource type="PackedScene" uid="uid://ynx4yyvsthry" path="res://save background objets placement/parallax_2d.tscn" id="11_wf03h"]
-[ext_resource type="PackedScene" uid="uid://dyg5ow1ayujjf" path="res://save background objets placement/back_objects.tscn" id="12_wf03h"]
-[ext_resource type="PackedScene" uid="uid://iwcd2o8485vw" path="res://save background objets placement/back_objects_2.tscn" id="13_2ed4s"]
+[ext_resource type="PackedScene" uid="uid://ynx4yyvsthry" path="res://Levels/save background objets placement/parallax_2d.tscn" id="11_wf03h"]
+[ext_resource type="PackedScene" uid="uid://dyg5ow1ayujjf" path="res://Levels/save background objets placement/back_objects.tscn" id="12_wf03h"]
+[ext_resource type="PackedScene" uid="uid://iwcd2o8485vw" path="res://Levels/save background objets placement/back_objects_2.tscn" id="13_2ed4s"]
 [ext_resource type="AnimationLibrary" uid="uid://g7b4r3bg5pd6" path="res://Animations/base_level.res" id="13_wf03h"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n4mxg"]
@@ -129,25 +129,7 @@ shape = SubResource("RectangleShape2D_x3nl1")
 player_dash = 1.0
 player_big_dash = 2.0
 
-[node name="Sky" type="Sprite2D" parent="."]
-light_mask = 2
-use_parent_material = true
-position = Vector2(40, -373)
-rotation = 1.5708
-scale = Vector2(30, 50)
-texture = ExtResource("11_6jk1m")
-
-[node name="EntranceLight" type="PointLight2D" parent="."]
-position = Vector2(-185.577, -326.482)
-rotation = 1.5708
-scale = Vector2(3.66947, 2.32391)
-energy = 2.5
-blend_mode = 2
-range_item_cull_mask = 2
-shadow_enabled = true
-shadow_item_cull_mask = 3
-texture = ExtResource("6_j3xrb")
-texture_scale = 20.0
+[node name="SkyEntrance" parent="." instance=ExtResource("3_2ed4s")]
 
 [node name="Player" parent="." instance=ExtResource("3_ruyyf")]
 position = Vector2(0, -144)
@@ -184,6 +166,15 @@ libraries = {
 [node name="BackObjects3" parent="." instance=ExtResource("13_2ed4s")]
 
 [node name="Parallax2D" parent="." instance=ExtResource("11_wf03h")]
+
+[node name="GrottoBackParallaxVisible" type="Sprite2D" parent="Parallax2D"]
+modulate = Color(1, 1, 1, 0.337255)
+light_mask = 2
+z_index = -2
+use_parent_material = true
+position = Vector2(828, 2245)
+scale = Vector2(2, 2)
+texture = ExtResource("7_npxkb")
 
 [connection signal="emit_big_sonar" from="MusicListener" to="Player" method="_onBigSonar"]
 [connection signal="emit_little_sonar" from="MusicListener" to="Player" method="_onSonar"]

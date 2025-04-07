@@ -32,7 +32,7 @@ func _process(_delta: float) -> void:
 		var current_rotation_degrees = abs(fmod(rotation_degrees, 360))
 		$Sprite2D.flip_v = current_rotation_degrees > 90 and current_rotation_degrees < 270
 	if Input.is_action_just_pressed("ui_select") && Player_State != State.Dash: ## dash debug
-		_onSonar()
+		pass##_processOnSonar()
 
 func _physics_process(delta: float) -> void:
 	#velocity = Input.get_vector("ui_left", "ui_right","ui_up", "ui_down") * 150
@@ -66,13 +66,18 @@ func _onDashFinished() -> void:
 
 #region SONAR#
 
-func _onBigSonar(speedMult : float = 1) -> void: _onSonar(true, speedMult)
+func _onBigSonar(speedMult : float) -> void: _processOnSonar(true, speedMult)
 
-func _onSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
+func _onSonar(speedMult : float) -> void: _processOnSonar(false, 1)
+
+func _processOnSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
 	var timer = sonarEmissionTime * speedMult
 	
-	var sLprefab = sonarLight if isOrganic else sonarLight2
+	var sLprefab = sonarLight
+	if isOrganic:
+		sLprefab = sonarLight2
 	var sL = sLprefab.instantiate()
+	print_debug(sL.name)
 	var lightForWalls = sL.get_child(0)
 	
 	get_parent().add_child(sL)

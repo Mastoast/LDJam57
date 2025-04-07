@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bq38f2ek6wl00"]
+
+[ext_resource type="Texture2D" uid="uid://b51yi2sl2icsl" path="res://Assets/Textures/skyGradient.tres" id="1_fa41u"]
+[ext_resource type="Texture2D" uid="uid://crvoofbojx1ae" path="res://Assets/Textures/lightGradient.tres" id="2_ocxwn"]
+
+[node name="SkyEntrance" type="Node2D"]
+
+[node name="Sky" type="Sprite2D" parent="."]
+light_mask = 2
+use_parent_material = true
+position = Vector2(40, -373)
+rotation = 1.5708
+scale = Vector2(30, 50)
+texture = ExtResource("1_fa41u")
+
+[node name="EntranceLight" type="PointLight2D" parent="."]
+position = Vector2(-185.577, -326.482)
+rotation = 1.5708
+scale = Vector2(3.66947, 2.32391)
+energy = 2.5
+blend_mode = 2
+range_item_cull_mask = 2
+shadow_enabled = true
+shadow_item_cull_mask = 7
+texture = ExtResource("2_ocxwn")
+texture_scale = 20.0
