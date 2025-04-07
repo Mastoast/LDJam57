@@ -7,9 +7,13 @@ light_mask = 6
 visibility_layer = 6
 
 [node name="PointLight2DWalls" parent="." index="0"]
+light_mask = 8
+visibility_layer = 8
 range_item_cull_mask = 8
 shadow_item_cull_mask = 8
 
 [node name="PointLight2DBack" parent="." index="1"]
+light_mask = 16
+visibility_layer = 16
 range_item_cull_mask = 16
 shadow_item_cull_mask = 16
