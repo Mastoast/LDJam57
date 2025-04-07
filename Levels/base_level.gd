@@ -68,3 +68,7 @@ func _on_end_cutscene_trigger(body: Node2D):
 		MusicPlayer.stop()
 		$AnimationPlayer.play("base_level/final_cutscene")
 		$"Dialogue boxes/Dialogue 7 trigger".collision_mask = 0
+
+func _write_text(text, label_name):
+	var get_label = get_node("control/"+label_name)
+	

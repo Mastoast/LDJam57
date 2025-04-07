@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
 [ext_resource type="PackedScene" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
-[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
+[ext_resource type="PackedScene" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="3_ruyyf"]
 [ext_resource type="PackedScene" uid="uid://bjpcwi3pflktf" path="res://Levels/map.tscn" id="6_6jk1m"]
 [ext_resource type="Texture2D" uid="uid://20yxdlcmgsxg" path="res://Assets/Textures/map/map_fond.png" id="7_npxkb"]
@@ -44,6 +44,7 @@ size = Vector2(5374, 2543)
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wf03h"]
 
 [node name="BaseLevel" type="Node2D"]
+modulate = Color(1, 0, 0, 0)
 material = SubResource("CanvasItemMaterial_n4mxg")
 script = ExtResource("1_2kef7")
 intro_enabled = false
@@ -54,14 +55,14 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="RichTextLabelCharacter1" type="RichTextLabel" parent="Control"]
+[node name="LabelCharacter1" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_left = -248.0
 offset_top = -277.0
 offset_right = 213.0
 offset_bottom = -223.0
 
-[node name="RichTextLabelCharacter2" type="RichTextLabel" parent="Control"]
+[node name="LabelCharacter2" type="RichTextLabel" parent="Control"]
 layout_mode = 0
 offset_left = -193.0
 offset_top = -230.0
