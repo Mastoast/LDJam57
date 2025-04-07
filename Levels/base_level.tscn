@@ -159,8 +159,6 @@ position = Vector2(-17, 1150)
 mesh = SubResource("ArrayMesh_2kef7")
 texture = ExtResource("8_npxkb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [connection signal="emit_big_sonar" from="MusicListener" to="Player" method="_onBigSonar"]
 [connection signal="emit_little_sonar" from="MusicListener" to="Player" method="_onSonar"]
 [connection signal="move_ship" from="MusicListener" to="Player" method="_dash"]
