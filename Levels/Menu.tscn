@@ -1,20 +1,128 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8m567xnnunls"]
+[gd_scene load_steps=13 format=3 uid="uid://c8m567xnnunls"]
 
 [ext_resource type="Script" uid="uid://dklgjmofmpuaj" path="res://Levels/main_menu.gd" id="1_6a0hj"]
-[ext_resource type="Texture2D" uid="uid://coln5micxyums" path="res://Assets/Textures/écran titre2.png" id="1_bdpv0"]
-[ext_resource type="Texture2D" uid="uid://dsx23ph4yata8" path="res://Assets/Textures/écran titre.png" id="2_8t5nu"]
+[ext_resource type="Texture2D" uid="uid://j0j2jig1nfmb" path="res://Assets/menu/background with the moon.png" id="2_vuwk1"]
 [ext_resource type="FontFile" uid="uid://gon6anxb81qy" path="res://Assets/Font/LaachirDeeper-ExtraBold.ttf" id="3_8t5nu"]
+[ext_resource type="Texture2D" uid="uid://csxy11hcm08ih" path="res://Assets/menu/ship.png" id="5_7pcdg"]
+[ext_resource type="Texture2D" uid="uid://u7ksxpqgcsg" path="res://Assets/menu/menu sub.png" id="6_ajojk"]
+[ext_resource type="Texture2D" uid="uid://cev2gjrr7t0bq" path="res://Assets/menu/character ship.png" id="6_k1aj7"]
+[ext_resource type="Texture2D" uid="uid://b5m6d078ne66e" path="res://Assets/menu/character sub.png" id="7_j0r6d"]
+[ext_resource type="Texture2D" uid="uid://dtp56j6hox0s0" path="res://Assets/menu/water front sub.png" id="8_qm8e0"]
+[ext_resource type="Texture2D" uid="uid://c7x3wxgiouka4" path="res://Assets/menu/water back.png" id="10_1pg2v"]
+
+[sub_resource type="Animation" id="Animation_1pg2v"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprites/MenuSub:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprites/MenuSub:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprites/MenuSub:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_j0r6d"]
+resource_name = "submarine_float"
+length = 9.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprites/MenuSub:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.16667, 9)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprites/MenuSub:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 12.815, -1.1, 0.0806379, 0.25, 0, 10.005, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.2, 6.4, 8.96667)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprites/MenuSub:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0.00112092, -0.25, 0, 0.233333, -0.0134828, -0.0646077, -1.36667, 0.0269656, 2.1, 0.0235949, 0.0516814, -1.8, -0.00281424, 1.13333, -0.00112889, 0, -0.299999, 0.00112092, 0.266667, 0.0196598),
+"times": PackedFloat32Array(0.0333333, 3, 6.93333, 8.96667)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1pg2v"]
+_data = {
+&"RESET": SubResource("Animation_1pg2v"),
+&"submarine_float": SubResource("Animation_j0r6d")
+}
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_6a0hj")
 
-[node name="ÉcranTitre2" type="Sprite2D" parent="."]
+[node name="sprites" type="Node2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("1_bdpv0")
 
-[node name="ÉcranTitre" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-texture = ExtResource("2_8t5nu")
+[node name="BackgroundWithTheMoon" type="Sprite2D" parent="sprites"]
+texture = ExtResource("2_vuwk1")
+
+[node name="WaterBack" type="Sprite2D" parent="sprites"]
+texture = ExtResource("10_1pg2v")
+
+[node name="WaterFrontShip" type="Sprite2D" parent="sprites"]
+modulate = Color(1, 1, 1, 0.458824)
+texture = ExtResource("8_qm8e0")
+
+[node name="Ship" type="Sprite2D" parent="sprites"]
+texture = ExtResource("5_7pcdg")
+
+[node name="CharacterShip" type="Sprite2D" parent="sprites/Ship"]
+position = Vector2(3, 3)
+texture = ExtResource("6_k1aj7")
+
+[node name="MenuSub" type="Sprite2D" parent="sprites"]
+texture = ExtResource("6_ajojk")
+
+[node name="CharacterSub" type="Sprite2D" parent="sprites/MenuSub"]
+position = Vector2(0, 2)
+texture = ExtResource("7_j0r6d")
+
+[node name="WaterFrontSub" type="Sprite2D" parent="sprites"]
+modulate = Color(1, 1, 1, 0.760784)
+texture = ExtResource("8_qm8e0")
 
 [node name="UI" type="Control" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -67,3 +175,8 @@ bbcode_enabled = true
 text = "[center][wave amp=30.0 freq=2.0 connected=0]Thank you for playing[/wave][/center]"
 fit_content = true
 scroll_active = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1pg2v")
+}
