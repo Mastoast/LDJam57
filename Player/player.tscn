@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cirkva4eojwhw"]
+[gd_scene load_steps=12 format=3 uid="uid://cirkva4eojwhw"]
 
 [ext_resource type="Script" uid="uid://1jkvvmcd0wrd" path="res://Player/player.gd" id="1_axnn4"]
 [ext_resource type="Texture2D" uid="uid://dgdk1nodh2edr" path="res://Assets/Textures/sous-marin.png" id="2_gwnis"]
 [ext_resource type="PackedScene" uid="uid://dlopvuf4yujyn" path="res://Assets/Particles/ParticleBubble.tscn" id="3_btcbx"]
 [ext_resource type="PackedScene" uid="uid://ti6gbyf1t2hf" path="res://Assets/Particles/ParticleCollisionWall.tscn" id="4_gwnis"]
 [ext_resource type="PackedScene" uid="uid://bsl7wwpvm0xgy" path="res://Assets/Particles/TEST TRAIL.tscn" id="5_k53q1"]
+[ext_resource type="Texture2D" uid="uid://cfr2mymxncrgc" path="res://Assets/Textures/Fish/Poisson de la fin.png" id="6_fhl08"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k53q1"]
 light_mode = 1
@@ -132,5 +133,11 @@ script = null
 libraries = {
 &"": SubResource("AnimationLibrary_fhl08")
 }
+
+[node name="PoissonDeLaFin" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-302, 143)
+texture = ExtResource("6_fhl08")
+flip_h = true
 
 [connection signal="timeout" from="Timer" to="." method="_onDashFinished"]
