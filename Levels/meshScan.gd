@@ -17,3 +17,7 @@ func _processSonarTime(delta):
 
 func _setSonarPulseTime(time):
 	SHADER.set_shader_parameter("pulse_time", time)
+
+func SetBigFishPositionOnPlayer():
+	player = get_tree().get_first_node_in_group("Player")
+	$PoissonDeLaFin.global_position = player.global_position
