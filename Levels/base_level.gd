@@ -71,4 +71,4 @@ func _on_end_cutscene_trigger(body: Node2D):
 
 func _write_text(text, label_name):
 	var get_label = get_node("control/"+label_name)
-	
+	get_label.text = Text.texts[text] 
