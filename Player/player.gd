@@ -65,7 +65,7 @@ func _onDashFinished() -> void:
 #endregion
 
 #region SONAR#
-func _onBigSonar() -> void: _onSonar(.5)
+func _onBigSonar() -> void: _onSonar(1.5)
 
 func _onSonar(speedMult : float = 1) -> void:
 	var timer = sonarEmissionTime * speedMult
@@ -80,12 +80,12 @@ func _onSonar(speedMult : float = 1) -> void:
 	var lightForWalls = sL.get_child(0) as PointLight2D
 	var lightBack = sL.get_child(1) as PointLight2D
 	sonarTween.tween_property(lightBack, "texture_scale", 50, .7 * timer)
-	sonarTween.parallel().tween_property(lightForWalls, "energy", 0.0, .7 * timer).set_ease(Tween.EASE_OUT)
+	sonarTween.parallel().tween_property(lightForWalls, "color", Color8(0,0,0,0), .7 * timer * .75).set_ease(Tween.EASE_OUT)
 	sonarTween.connect("finished", func() -> void: sL.queue_free())
 	
 	var sonarPulseTween = create_tween()
 	setSonarPulseTime.emit(timer)
-	sonarPulseTween.tween_method(sendSonarWithTime.emit, 0.0, timer, timer) ## object based shader fx
+	sonarPulseTween.tween_method(sendSonarWithTime.emit, 0.0, timer * .8, timer * .8) ## object based shader fx
 	sonarPulseTween.connect("finished", func() -> void: sendSonarWithTime.emit(-1.0))
 	
 	sonarTween.play()
