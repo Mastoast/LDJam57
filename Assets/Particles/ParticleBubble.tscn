@@ -20,6 +20,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 visibility_layer = 3
+use_parent_material = true
 emitting = false
 amount = 35
 texture = ExtResource("1_xgqlx")

@@ -80,7 +80,7 @@ func _onSonar(speedMult : float = 1) -> void:
 	var lightForWalls = sL.get_child(0) as PointLight2D
 	var lightBack = sL.get_child(1) as PointLight2D
 	sonarTween.tween_property(lightBack, "texture_scale", 50, .7 * timer)
-	sonarTween.parallel().tween_property(lightForWalls, "texture_scale", 0, .7 * timer)
+	sonarTween.parallel().tween_property(lightForWalls, "energy", 0.0, .7 * timer).set_ease(Tween.EASE_OUT)
 	sonarTween.connect("finished", func() -> void: sL.queue_free())
 	
 	var sonarPulseTween = create_tween()

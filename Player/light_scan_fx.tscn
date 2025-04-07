@@ -1,17 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://jryiame3igna"]
+[gd_scene load_steps=3 format=3 uid="uid://jryiame3igna"]
 
 [ext_resource type="PackedScene" uid="uid://bbdarstugxufp" path="res://Player/point_light_2d.tscn" id="1_d2naj"]
+[ext_resource type="Texture2D" uid="uid://mpo86iuvmtbp" path="res://Assets/Textures/radialGradientOpaque.tres" id="2_fu05g"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="PointLight2D" parent="." instance=ExtResource("1_d2naj")]
+[node name="PointLight2DWalls" parent="." instance=ExtResource("1_d2naj")]
 visible = true
-energy = 16.0
+modulate = Color(1, 1, 1, 0.490196)
+energy = 2.0
+texture = ExtResource("2_fu05g")
 texture_scale = 15.0
 
 [node name="PointLight2DBack" parent="." instance=ExtResource("1_d2naj")]
 visible = true
-energy = 16.0
+z_index = -1
+energy = 1.0
 range_item_cull_mask = 4
-shadow_item_cull_mask = 5
+shadow_item_cull_mask = 7
 texture_scale = 15.0
