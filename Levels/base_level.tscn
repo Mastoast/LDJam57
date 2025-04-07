@@ -61,6 +61,7 @@ _surfaces = [{
 [node name="BaseLevel" type="Node2D"]
 material = SubResource("CanvasItemMaterial_n4mxg")
 script = ExtResource("1_2kef7")
+intro_enabled = false
 
 [node name="DialogueAudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(0, -144)
