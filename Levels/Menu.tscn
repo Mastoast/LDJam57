@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://nylpp1ynvhvq"]
+[gd_scene load_steps=5 format=3 uid="uid://c8m567xnnunls"]
 
+[ext_resource type="Script" uid="uid://dklgjmofmpuaj" path="res://Levels/main_menu.gd" id="1_6a0hj"]
 [ext_resource type="Texture2D" uid="uid://coln5micxyums" path="res://Assets/Textures/écran titre2.png" id="1_bdpv0"]
 [ext_resource type="Texture2D" uid="uid://dsx23ph4yata8" path="res://Assets/Textures/écran titre.png" id="2_8t5nu"]
+[ext_resource type="FontFile" uid="uid://gon6anxb81qy" path="res://Assets/Font/LaachirDeeper-ExtraBold.ttf" id="3_8t5nu"]
 
 [node name="Menu" type="Node2D"]
+script = ExtResource("1_6a0hj")
 
 [node name="ÉcranTitre2" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
@@ -13,9 +16,54 @@ texture = ExtResource("1_bdpv0")
 position = Vector2(960, 540)
 texture = ExtResource("2_8t5nu")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 46.0
-offset_top = 884.0
-offset_right = 936.0
-offset_bottom = 1072.0
-text = "Press any key to start"
+[node name="UI" type="Control" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 30.0
+
+[node name="PressKeyLabel" type="RichTextLabel" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -377.0
+offset_top = 340.0
+offset_right = 383.0
+offset_bottom = 455.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("3_8t5nu")
+theme_override_font_sizes/normal_font_size = 67
+bbcode_enabled = true
+text = "[center][wave amp=30.0 freq=2.0 connected=0]Press any key to start[/wave][/center]"
+fit_content = true
+scroll_active = false
+
+[node name="ThanksLabel" type="RichTextLabel" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -377.0
+offset_top = 340.0
+offset_right = 383.0
+offset_bottom = 455.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("3_8t5nu")
+theme_override_font_sizes/normal_font_size = 67
+bbcode_enabled = true
+text = "[center][wave amp=30.0 freq=2.0 connected=0]Thank you for playing[/wave][/center]"
+fit_content = true
+scroll_active = false
