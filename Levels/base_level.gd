@@ -2,6 +2,7 @@ extends Node2D
 
 @export var pitch:float = 1.0
 @export var fade_delay = 2.0
+@export var intro_enabled = true
 
 var dialogue1 = load("res://Assets/audio/Dialogues/Dialogue 1.wav")
 var dialogue2 = load("res://Assets/audio/Dialogues/Dialogue 2.wav")
@@ -15,7 +16,10 @@ var dialogue7b = load("res://Assets/audio/Dialogues/Dialogue 7b.wav")
 var dialogue7c = load("res://Assets/audio/Dialogues/Dialogue 7c.wav")
 
 func _ready() -> void:
-	$AnimationPlayer.play("base_level/intro")
+	if intro_enabled :
+		$AnimationPlayer.play("base_level/intro")
+	else:
+		start_level()
 
 func start_level():
 	MusicPlayer.play(MusicPlayer.music_80bpm, pitch)
