@@ -29,6 +29,11 @@ func start_level():
 func load_main_menu():
 	get_tree().change_scene_to_file(main_menu_path)
 
+func _on_first_sonar_activation(body: Node2D):
+	if body.is_in_group("Player"):
+		$DialogueAudioStreamPlayer.stream = dialogue2
+		$DialogueAudioStreamPlayer.play()
+
 func _on_end_cutscene_trigger(body: Node2D):
 	if body.is_in_group("Player"):
 		MusicPlayer.stop()

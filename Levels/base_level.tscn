@@ -184,6 +184,7 @@ position = Vector2(828, 2245)
 scale = Vector2(2, 2)
 texture = ExtResource("7_npxkb")
 
+[connection signal="body_entered" from="Dialogue boxes/Dialogue 2 trigger" to="." method="_on_first_sonar_activation"]
 [connection signal="body_entered" from="Dialogue boxes/Dialogue 7 trigger" to="." method="_on_end_cutscene_trigger"]
 [connection signal="emit_big_sonar" from="MusicListener" to="Player" method="_onBigSonar"]
 [connection signal="emit_little_sonar" from="MusicListener" to="Player" method="_onSonar"]
