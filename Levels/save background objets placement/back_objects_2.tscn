@@ -107,7 +107,9 @@ mesh = SubResource("ArrayMesh_7wp01")
 texture = ExtResource("3_hcyrl")
 
 [node name="PoissonDeLaFin" type="MeshInstance2D" parent="."]
+light_mask = 8
+visibility_layer = 8
 use_parent_material = true
-position = Vector2(1037, 6834)
+position = Vector2(4477, 8961)
 mesh = SubResource("ArrayMesh_130ck")
 texture = ExtResource("4_130ck")
