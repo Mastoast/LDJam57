@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://ynx4yyvsthry"]
+
+[ext_resource type="Texture2D" uid="uid://20yxdlcmgsxg" path="res://Assets/Textures/map/map_fond.png" id="1_nssow"]
+
+[node name="Parallax2D" type="Parallax2D"]
+light_mask = 7
+visibility_layer = 7
+z_index = -2
+use_parent_material = true
+scroll_scale = Vector2(0.5, 0.1)
+
+[node name="GrottoBackParallaxSonar" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.337255)
+light_mask = 4
+z_index = -2
+use_parent_material = true
+position = Vector2(828, 2245)
+scale = Vector2(2, 2)
+texture = ExtResource("1_nssow")

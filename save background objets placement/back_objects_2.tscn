@@ -21,7 +21,7 @@ _surfaces = [{
 [node name="BackObjects2" type="Parallax2D"]
 z_index = -1
 material = ExtResource("1_c3m2s")
-scroll_scale = Vector2(0.7, 0.7)
+scroll_scale = Vector2(0.5, 0.8)
 script = ExtResource("2_ascgg")
 
 [node name="Sprite2D7" type="MeshInstance2D" parent="."]
