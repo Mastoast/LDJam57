@@ -14,6 +14,8 @@ texture_scale = 15.0
 
 [node name="PointLight2DBack" parent="." instance=ExtResource("1_d2naj")]
 visible = true
+light_mask = 5
+visibility_layer = 5
 z_index = -1
 energy = 1.0
 range_item_cull_mask = 4
