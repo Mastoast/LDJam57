@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bysyuuxtcn4o0"]
+
+[ext_resource type="PackedScene" uid="uid://jryiame3igna" path="res://Player/light_scan_fx.tscn" id="1_6xlvk"]
+
+[node name="LightScan2" instance=ExtResource("1_6xlvk")]
+light_mask = 6
+visibility_layer = 6
+
+[node name="PointLight2DWalls" parent="." index="0"]
+range_item_cull_mask = 2
+shadow_item_cull_mask = 2

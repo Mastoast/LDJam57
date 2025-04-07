@@ -15,7 +15,7 @@ var particleCollision = load("res://Assets/Particles/ParticleCollisionWall.tscn"
 var sonarEmissionTime = 2.0
 
 var sonarLight = load("res://Player/light_scan_fx.tscn")
-##@export var sonarLightBack : PointLight2D
+var sonarLight2 = load("res://Player/light_scan_fx2.tscn")
 #endregion
 
 #region SIGNALS
@@ -65,19 +65,23 @@ func _onDashFinished() -> void:
 #endregion
 
 #region SONAR#
-func _onBigSonar() -> void: _onSonar(1.5)
 
-func _onSonar(speedMult : float = 1) -> void:
+func _onBigSonar(speedMult : float = 1) -> void: _onSonar(true, speedMult)
+
+func _onSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
 	var timer = sonarEmissionTime * speedMult
 	
-	var sL = sonarLight.instantiate()
+	var sLprefab = sonarLight if isOrganic else sonarLight2
+	var sL = sLprefab.instantiate()
+	var lightForWalls = sL.get_child(0)
+	
 	get_parent().add_child(sL)
 	sL.global_position = global_position
 	
 	var sonarTween = create_tween()
 	sL.scale = Vector2.ZERO
 	sonarTween.tween_property(sL, "scale", Vector2(1.0, 1.0), .3 * timer)
-	var lightForWalls = sL.get_child(0) as PointLight2D
+	
 	var lightBack = sL.get_child(1) as PointLight2D
 	sonarTween.tween_property(lightBack, "texture_scale", 50, .7 * timer)
 	sonarTween.parallel().tween_property(lightForWalls, "color", Color8(0,0,0,0), .7 * timer * .75).set_ease(Tween.EASE_OUT)
