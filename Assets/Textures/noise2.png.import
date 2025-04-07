@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://20yxdlcmgsxg"
-path="res://.godot/imported/map_fond.png-7dd49acbc5b6a2a02159f08749d850dd.ctex"
+uid="uid://bcc8i5vsgb2du"
+path="res://.godot/imported/noise2.png-fd1907da4afec818404c03190c068cec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/map/map_fond.png"
-dest_files=["res://.godot/imported/map_fond.png-7dd49acbc5b6a2a02159f08749d850dd.ctex"]
+source_file="res://Assets/Textures/noise2.png"
+dest_files=["res://.godot/imported/noise2.png-fd1907da4afec818404c03190c068cec.ctex"]
 
 [params]
 
@@ -23,9 +23,9 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
+roughness/mode=5
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false

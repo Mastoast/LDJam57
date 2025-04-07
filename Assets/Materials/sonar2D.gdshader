@@ -1,5 +1,5 @@
 shader_type canvas_item;
-render_mode blend_mix, unshaded;
+render_mode blend_mix, light_only;//, unshaded;
 
 uniform float fade_radius : hint_range(0.5, 50.0) = 5.0;
 uniform float max_intensity : hint_range(0.0, 3.0) = 2.0;
