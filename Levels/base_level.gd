@@ -63,6 +63,7 @@ func _on_dialogue_6(body: Node2D):
 
 func _on_end_cutscene_trigger(body: Node2D):
 	if body.is_in_group("Player"):
+		Save.is_ending = true
 		MusicPlayer.stop()
 		$AnimationPlayer.play("base_level/final_cutscene")
 		$"Dialogue boxes/Dialogue 7 trigger".collision_mask = 0
