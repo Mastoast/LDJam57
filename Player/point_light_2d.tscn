@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bbdarstugxufp"]
 
-[ext_resource type="Texture2D" uid="uid://bvmlquuyjn02t" path="res://Assets/radialGradient.tres" id="1_p5tlt"]
+[ext_resource type="Texture2D" uid="uid://c8e5orbs8y6dr" path="res://Assets/Textures/radialGradient.tres" id="1_p5tlt"]
 
 [node name="PointLight2D" type="PointLight2D"]
 visible = false
