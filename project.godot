@@ -18,7 +18,6 @@ config/icon="res://Assets/Textures/icon.svg"
 [autoload]
 
 MusicPlayer="*res://Singletons/MusicPlayer.gd"
-Player="*res://Player/player.gd"
 
 [display]
 
