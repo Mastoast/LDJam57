@@ -1,4 +1,4 @@
-[gd_resource type="GradientTexture2D" load_steps=2 format=3 uid="uid://bwst5seg5sxcp"]
+[gd_resource type="GradientTexture2D" load_steps=2 format=3 uid="uid://cwvh8n6uxe04q"]
 
 [sub_resource type="Gradient" id="Gradient_ae50k"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)

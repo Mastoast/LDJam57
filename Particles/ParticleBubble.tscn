@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlopvuf4yujyn"]
 
-[ext_resource type="Texture2D" uid="uid://cc0u75l8x3m0n" path="res://Assets/circle for particle.png" id="1_xgqlx"]
+[ext_resource type="Texture2D" uid="uid://dls8m5bfj825o" path="res://Assets/BUBBLE.png" id="1_xgqlx"]
 
 [sub_resource type="Curve" id="Curve_thiyr"]
 _limits = [-360.0, 360.0, 0.0, 1.0]
@@ -21,19 +21,19 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 visibility_layer = 3
 emitting = false
-amount = 15
+amount = 35
 texture = ExtResource("1_xgqlx")
 one_shot = true
 explosiveness = 0.85
 randomness = 0.5
-direction = Vector2(-1, -0.25)
-spread = 30.0
-gravity = Vector2(0, -380)
-initial_velocity_min = 375.0
-initial_velocity_max = 375.0
+direction = Vector2(-1, 0)
+spread = 15.0
+gravity = Vector2(0, -800)
+initial_velocity_min = 300.0
+initial_velocity_max = 400.0
 orbit_velocity_max = 0.2
 angle_curve = SubResource("Curve_thiyr")
-scale_amount_min = 0.05
-scale_amount_max = 0.25
+scale_amount_min = 0.02
+scale_amount_max = 0.1
 scale_amount_curve = SubResource("Curve_v21du")
 color_ramp = SubResource("Gradient_2npp2")
