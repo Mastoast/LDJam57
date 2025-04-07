@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://brtkqmlu6ql84"]
+[gd_scene load_steps=27 format=4 uid="uid://brtkqmlu6ql84"]
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
 [ext_resource type="PackedScene" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
@@ -58,7 +58,37 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AADAwQCASMPMzBDCAIBGw8zMJMIAgEbDAABUwgCAQsPMzGTCAIBCw2ZmjsIAgDzDzcyUwgCAPMPNzJjCAIA6w5qZnsIAgDrDmpnCwgCAMMOamcbCAIAww5qZ1sIAgCrDzczawgCAKsPNzPTCAIAfwwAA+cIAgB/DAAD9wgCAHMNmZgDDAIAcw2ZmEMMAgAzDAAASwwCADMMAABLDZuYJw2ZmGcMAgALDAAAbwwCAAsMAABvDzcz/wmZmHMMAAP3CAAAewwAA/cIAAB7Dzcz3wmZmH8MAAPXCAAAhwwAA9cIAACHDzczvwmZmIsMAAO3CmpkjwwAA7cKamSXDAADlwpqZJsMAAOXCmpktwwAAy8KamS7DAADLwpqZN8MAAKPCM7M4wwAAo8LNzDzDAACJws3MPcMAAInCzcxDwwAALsJm5kTDAAAuwmbmRsMAAMzBAABHwzAz10EAAEXDzMwOQgAARcPMzCJCAABBwwAAUkIAAEHD0MxiQgAAO8M0M41CAAA7w2hmk0IAAC/DmJnBQgAAL8PMzMVCZmYtwwAAyUKamSzDAADJQgAALMNoZstCAAAsw8zMz0IAACfDmJnbQgAAJ8PMzN9CAAAbw8zM+0IAABvDzMz/QgAAEsNm5gdDAAASwwAACkMAAAHDZuYYQwAAAcMAgBpDzcz8wgCAGkMAAPrCZuYbQwAA+sIAgB1Dzcz0wgCAHUMAAPLCZuYeQwAA8sIAgCBDzczswgCAIEMAAOrCZuYhQwAA6sKaGSNDAADcwpoZJ0MAANzCmhkoQwAAoMKaGTdDAACgwjQzOEMAAGjCNDM/QwAAaMLMTEBDAAAUwsxMREMAABTCZmZFQwAAwMFmZkZDAADAwQCAR0MAABDBAIBHQwAAEMEAgEhDwMzswACASEOgmRFBAIBHQ9DMwEEAgEdDzMwUQgCAREPMzChCAIBEQwAAWEIAgEBD0MxoQgCAQENoZpBCAIA6Q8zMlkIAgDpDzMyaQgCAOEOYmaBCAIA4Q5iZxEIAgC5DmJnIQgCALkOYmdhCAIAoQ8zM3EIAgChDzMz2QgCAHUMAAPtCAIAdQwAA/0IAgBpDZmYBQwCAGkNmZglDAIARQwCAC0MAgBFDZmYaQwCAAEMAABxDAIAAQwAAHEPMzPtCZmYdQwAA+UIAAB9DAAD5QgAAH0PMzPNCZmYgQwAA8UIAACJDAADxQgAAIkPMzOtCZmYjQwAA6UKamSRDAADpQpqZKEMAANtCmpkpQwAA20KamS5DAADHQpqZL0MAAMdCmpk4QwAAn0I0szlDAACfQszMQEMAAGZCzMxBQwAAZkLMzEVDAAASQgAAR0MAABJCAABHQ8zMCsIAAEJDzMxawgAAQkPMzGrCAAA8Q2ZmkcIAADxDzcyXwgAAOkPNzJvCAAA6Q5qZocIAADBDzczFwgAAMEPNzMnCZmYuQwAAzcKamS1DAADNwgAALUNmZs/CAAAtQ83M08IAAChDzczfwgAAKEPNzOPCAAAcQwAAAMMAABxDZuYBwwAAE0MAAArDAAATQwAADMMAAAJDAAAbwwAAAkMAgBzDzMz+QgCAHMMAAPxCZuYdwwAA/EIAgB/DzMz2QgCAH8MAAPRCZuYgwwAA9EIAgCLDzMzuQgCAIsMAAOxCZuYjwwAA7EKaGSXDAADeQjMzKcMAAN5CmhkqwwAAokKaGTnDAACiQjMzOsMAAIhCzUw+wwAAiELNTD/DAAAsQmZmRcMAACxCZmZGwwAAyEFmZkjD")
 }]
 
+[sub_resource type="Animation" id="Animation_wf03h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:generic_sonar_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:organic_sonar_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wf03h"]
+_data = {
+&"RESET": SubResource("Animation_wf03h")
+}
 
 [node name="BaseLevel" type="Node2D"]
 material = SubResource("CanvasItemMaterial_n4mxg")
@@ -185,6 +215,10 @@ scale = Vector2(2, 2)
 texture = ExtResource("7_npxkb")
 
 [connection signal="body_entered" from="Dialogue boxes/Dialogue 2 trigger" to="." method="_on_first_sonar_activation"]
+[connection signal="body_entered" from="Dialogue boxes/Dialogue 3 trigger" to="." method="_on_dialogue_3"]
+[connection signal="body_entered" from="Dialogue boxes/Dialogue 4 trigger" to="." method="_on_dialogue_4"]
+[connection signal="body_entered" from="Dialogue boxes/Dialogue 5 trigger" to="." method="_on_second_sonar_activation"]
+[connection signal="body_entered" from="Dialogue boxes/Dialogue 6 trigger" to="." method="_on_dialogue_6"]
 [connection signal="body_entered" from="Dialogue boxes/Dialogue 7 trigger" to="." method="_on_end_cutscene_trigger"]
 [connection signal="emit_big_sonar" from="MusicListener" to="Player" method="_onBigSonar"]
 [connection signal="emit_little_sonar" from="MusicListener" to="Player" method="_onSonar"]

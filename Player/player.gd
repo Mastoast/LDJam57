@@ -16,6 +16,11 @@ var sonarEmissionTime = 2.0
 
 var sonarLight = load("res://Player/light_scan_fx.tscn")
 var sonarLight2 = load("res://Player/light_scan_fx2.tscn")
+
+@export_category("Sonar")
+@export var generic_sonar_enabled = false
+@export var organic_sonar_enabled = false
+
 #endregion
 
 #region SIGNALS
@@ -71,6 +76,11 @@ func _onBigSonar(speedMult : float) -> void: _processOnSonar(true, speedMult)
 func _onSonar(speedMult : float) -> void: _processOnSonar(false, speedMult)
 
 func _processOnSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
+	if !isOrganic and !generic_sonar_enabled:
+		return
+	if isOrganic and !organic_sonar_enabled:
+		return
+	
 	var timer = sonarEmissionTime * speedMult
 	
 	var sLprefab = sonarLight
