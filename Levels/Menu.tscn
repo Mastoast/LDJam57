@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8m567xnnunls"]
+[gd_scene load_steps=13 format=3 uid="uid://nylpp1ynvhvq"]
 
-[ext_resource type="Script" uid="uid://dklgjmofmpuaj" path="res://Levels/main_menu.gd" id="1_6a0hj"]
+[ext_resource type="Script" path="res://Levels/main_menu.gd" id="1_6a0hj"]
 [ext_resource type="Texture2D" uid="uid://j0j2jig1nfmb" path="res://Assets/menu/background with the moon.png" id="2_vuwk1"]
 [ext_resource type="FontFile" uid="uid://gon6anxb81qy" path="res://Assets/Font/LaachirDeeper-ExtraBold.ttf" id="3_8t5nu"]
 [ext_resource type="Texture2D" uid="uid://csxy11hcm08ih" path="res://Assets/menu/ship.png" id="5_7pcdg"]
