@@ -19,6 +19,7 @@ _surfaces = [{
 }]
 
 [node name="BackObjectsRed" type="Parallax2D"]
+modulate = Color(1, 1, 1, 0.490196)
 light_mask = 8
 visibility_layer = 8
 z_index = -1
