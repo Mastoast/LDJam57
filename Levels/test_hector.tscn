@@ -17,7 +17,7 @@ func _ready() -> void:
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q0lvo"]
 polygon = PackedVector2Array(-63.5866, 34.9534, 186.528, 30.0882, 141.37, -81.6738, -31.3343, -40.5236)
 
-[node name="Node2D" type="Node2D"]
+[node name="testHector" type="Node2D"]
 material = SubResource("CanvasItemMaterial_q0lvo")
 script = SubResource("GDScript_6p0fx")
 
@@ -40,17 +40,16 @@ baseDashForce = 5.0
 light_mask = 2
 use_parent_material = true
 position = Vector2(797, 220)
-polygon = PackedVector2Array(-195, -116, 333, -29, 276, 367, -26, 235)
+polygon = PackedVector2Array(-195, -116, 321, -117, 308, 355, -168, 343)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-visible = false
-position = Vector2(721, 316)
+position = Vector2(602, 429)
 rotation = 1.37651
 occluder = SubResource("OccluderPolygon2D_q0lvo")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(457, 387)
-scale = Vector2(0.825, 0.825)
+position = Vector2(445.25, 438.75)
+scale = Vector2(0.8015, 0.9285)
 range_item_cull_mask = 2
 shadow_enabled = true
 shadow_item_cull_mask = 3
