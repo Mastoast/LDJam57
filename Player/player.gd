@@ -46,6 +46,7 @@ func _physics_process(delta: float) -> void:
 			newParticle.global_position = collision.get_position()
 			newParticle.restart()
 			position = latestPosition
+			$AnimationPlayer.play("bump", -1, 2)
 	 
 func _get_position():
 	return get_parent().position
