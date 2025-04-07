@@ -37,6 +37,7 @@ func play(music, pitch = 1.0, position = 0.0):
 		player = AudioStreamPlayer.new()
 		player.bus = "Music"
 		player.name = playerName
+		player.playback_type = AudioServer.PLAYBACK_TYPE_STREAM
 	if !player.is_inside_tree():
 		get_tree().current_scene.add_child(player)
 	loop_count = 0

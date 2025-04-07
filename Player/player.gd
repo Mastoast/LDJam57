@@ -10,7 +10,7 @@ var Player_State : State = State.Idle
 
 var latestPosition : Vector2
 
-var particleCollision = load("res://Particles/ParticleCollisionWall.tscn")
+var particleCollision = load("res://Assets/Particles/ParticleCollisionWall.tscn")
 
 var sonarEmissionTime = 2.0
 
@@ -33,7 +33,7 @@ func _process(_delta: float) -> void:
 		$Sprite2D.flip_v = current_rotation_degrees > 90 and current_rotation_degrees < 270
 	if Input.is_action_just_pressed("ui_select") && Player_State != State.Dash: ## dash debug
 		_onSonar()
-		
+
 func _physics_process(delta: float) -> void:
 	#velocity = Input.get_vector("ui_left", "ui_right","ui_up", "ui_down") * 150
 	#move_and_slide()
@@ -46,7 +46,8 @@ func _physics_process(delta: float) -> void:
 			newParticle.global_position = collision.get_position()
 			newParticle.restart()
 			position = latestPosition
-	 
+			$AnimationPlayer.play("bump", -1, 2)
+
 func _get_position():
 	return get_parent().position
 	
