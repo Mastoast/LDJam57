@@ -143,6 +143,7 @@ baseDashForce = 200.0
 [node name="Map" parent="." instance=ExtResource("6_6jk1m")]
 
 [node name="BackObjects" type="Parallax2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.490196)
 z_index = -1
 material = ExtResource("7_jg3su")
@@ -167,9 +168,10 @@ libraries = {
 &"base_level": ExtResource("13_wf03h")
 }
 
-[node name="BackObjects2" parent="." instance=ExtResource("12_wf03h")]
+[node name="BackObjectsWhite" parent="." instance=ExtResource("12_wf03h")]
 
-[node name="BackObjects3" parent="." instance=ExtResource("13_2ed4s")]
+[node name="BackObjectsRed" parent="." instance=ExtResource("13_2ed4s")]
+visibility_layer = 8
 
 [node name="Parallax2D" parent="." instance=ExtResource("11_wf03h")]
 
