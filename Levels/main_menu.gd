@@ -9,7 +9,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		var tween = get_tree().create_tween()
-		tween.set_trans(Tween.TRANS_CUBIC)
+		tween.set_trans(Tween.TRANS_CIRC)
 		tween.tween_property(self, "modulate", Color(1,1,1,0), fade_delay)
 		tween.tween_callback(load_level)
 
