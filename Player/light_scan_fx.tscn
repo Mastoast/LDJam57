@@ -10,7 +10,9 @@ visibility_layer = 0
 [node name="PointLight2DWalls" parent="." instance=ExtResource("1_d2naj")]
 visible = true
 modulate = Color(1, 1, 1, 0.490196)
+color = Color(0.992157, 0.572549, 0.937255, 1)
 energy = 2.0
+shadow_item_cull_mask = 5
 texture = ExtResource("2_fu05g")
 texture_scale = 15.0
 
@@ -19,6 +21,7 @@ visible = true
 light_mask = 4
 visibility_layer = 4
 z_index = -1
+color = Color(0.992157, 0.572549, 0.937255, 1)
 energy = 1.0
 range_item_cull_mask = 4
 shadow_item_cull_mask = 4
