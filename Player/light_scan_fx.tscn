@@ -4,19 +4,24 @@
 [ext_resource type="Texture2D" uid="uid://mpo86iuvmtbp" path="res://Assets/Textures/radialGradientOpaque.tres" id="2_fu05g"]
 
 [node name="LightScan1" type="Node2D"]
+light_mask = 0
+visibility_layer = 0
 
 [node name="PointLight2DWalls" parent="." instance=ExtResource("1_d2naj")]
 visible = true
 modulate = Color(1, 1, 1, 0.490196)
+color = Color(0.992157, 0.572549, 0.937255, 1)
 energy = 2.0
+shadow_item_cull_mask = 5
 texture = ExtResource("2_fu05g")
 texture_scale = 15.0
 
 [node name="PointLight2DBack" parent="." instance=ExtResource("1_d2naj")]
 visible = true
-light_mask = 5
-visibility_layer = 5
+light_mask = 4
+visibility_layer = 4
 z_index = -1
+color = Color(0.992157, 0.572549, 0.937255, 1)
 energy = 1.0
 range_item_cull_mask = 4
 shadow_item_cull_mask = 4

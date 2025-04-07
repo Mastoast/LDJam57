@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qpy2546f8uxp"
-path="res://.godot/imported/16.png-4cb00875008243ee6a629c4b167c1fa3.ctex"
+uid="uid://c2xujgd30mel0"
+path="res://.godot/imported/map rouge.png-db93c2d780f25c849d0e0af0410b40dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Red Truc/16.png"
-dest_files=["res://.godot/imported/16.png-4cb00875008243ee6a629c4b167c1fa3.ctex"]
+source_file="res://Assets/Textures/map/map rouge.png"
+dest_files=["res://.godot/imported/map rouge.png-db93c2d780f25c849d0e0af0410b40dd.ctex"]
 
 [params]
 
