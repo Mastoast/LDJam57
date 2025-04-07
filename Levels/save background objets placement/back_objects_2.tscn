@@ -20,6 +20,7 @@ _surfaces = [{
 
 [node name="BackObjectsRed" type="Parallax2D"]
 light_mask = 8
+visibility_layer = 8
 z_index = -1
 material = ExtResource("1_c3m2s")
 scroll_scale = Vector2(0.5, 0.8)
@@ -27,6 +28,7 @@ script = ExtResource("2_ascgg")
 
 [node name="Sprite2D7" type="MeshInstance2D" parent="."]
 light_mask = 8
+visibility_layer = 8
 use_parent_material = true
 position = Vector2(3865.1, 8769.5)
 scale = Vector2(0.612768, 0.297635)
@@ -35,6 +37,7 @@ texture = ExtResource("3_hcyrl")
 
 [node name="Sprite2D6" type="MeshInstance2D" parent="."]
 light_mask = 8
+visibility_layer = 8
 use_parent_material = true
 position = Vector2(2006, 6712)
 scale = Vector2(0.279889, 0.195065)
@@ -43,6 +46,7 @@ texture = ExtResource("3_hcyrl")
 
 [node name="Sprite2D5" type="MeshInstance2D" parent="."]
 light_mask = 8
+visibility_layer = 8
 use_parent_material = true
 position = Vector2(273, 5099)
 scale = Vector2(-0.549463, -0.458707)
@@ -51,6 +55,7 @@ texture = ExtResource("3_hcyrl")
 
 [node name="Sprite2D4" type="MeshInstance2D" parent="."]
 light_mask = 8
+visibility_layer = 8
 use_parent_material = true
 position = Vector2(-148, 4538)
 rotation = 3.14159
@@ -60,6 +65,7 @@ texture = ExtResource("3_hcyrl")
 
 [node name="Sprite2D3" type="MeshInstance2D" parent="."]
 light_mask = 8
+visibility_layer = 8
 use_parent_material = true
 position = Vector2(482.295, 3260.2)
 scale = Vector2(0.172547, 0.151181)
@@ -68,6 +74,7 @@ texture = ExtResource("3_hcyrl")
 
 [node name="Sprite2D2" type="MeshInstance2D" parent="."]
 light_mask = 8
+visibility_layer = 8
 use_parent_material = true
 position = Vector2(865, 2835)
 scale = Vector2(0.0526007, 0.0526007)
@@ -76,6 +83,7 @@ texture = ExtResource("3_hcyrl")
 
 [node name="Sprite2D" type="MeshInstance2D" parent="."]
 light_mask = 8
+visibility_layer = 8
 use_parent_material = true
 position = Vector2(1444, 2500)
 scale = Vector2(0.229348, 0.229348)

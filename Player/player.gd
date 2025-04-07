@@ -88,7 +88,6 @@ func _processOnSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
 		sLprefab = sonarLight2
 	var sL = sLprefab.instantiate()
 	print_debug(sL.name)
-	var lightForWalls = sL.get_child(0)
 	
 	get_parent().add_child(sL)
 	sL.global_position = global_position
@@ -99,7 +98,8 @@ func _processOnSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
 	
 	var lightBack = sL.get_child(1) as PointLight2D
 	sonarTween.tween_property(lightBack, "texture_scale", 50, .7 * timer)
-	sonarTween.parallel().tween_property(lightForWalls, "color", Color8(0,0,0,0), .7 * timer * .75).set_ease(Tween.EASE_OUT)
+	var lightForWalls = sL.get_child(0) as PointLight2D
+	sonarTween.parallel().tween_property(lightForWalls, "energy", 0.0, .7 * timer * .75).set_ease(Tween.EASE_OUT)
 	sonarTween.connect("finished", func() -> void: sL.queue_free())
 	
 	var sonarPulseTween = create_tween()
