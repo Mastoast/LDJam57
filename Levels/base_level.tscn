@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://brtkqmlu6ql84"]
+[gd_scene load_steps=35 format=4 uid="uid://brtkqmlu6ql84"]
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
 [ext_resource type="PackedScene" uid="uid://bq38f2ek6wl00" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
@@ -21,6 +21,9 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n4mxg"]
 light_mode = 2
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_8ftg7"]
+light_mode = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jk1m"]
 size = Vector2(925, 402)
@@ -113,6 +116,8 @@ script = ExtResource("1_2kef7")
 intro_enabled = false
 
 [node name="Control" type="Control" parent="."]
+z_index = 2
+material = SubResource("CanvasItemMaterial_8ftg7")
 layout_mode = 3
 anchors_preset = 0
 offset_left = 10.0
@@ -122,6 +127,7 @@ offset_bottom = -545.0
 metadata/_edit_use_anchors_ = true
 
 [node name="LabelCharacter1" type="RichTextLabel" parent="Control"]
+use_parent_material = true
 layout_mode = 0
 offset_left = -140.0
 offset_top = -139.0
@@ -129,6 +135,7 @@ offset_right = 321.0
 offset_bottom = -85.0
 
 [node name="LabelCharacter2" type="RichTextLabel" parent="Control"]
+use_parent_material = true
 layout_mode = 0
 offset_left = -85.0
 offset_top = -92.0

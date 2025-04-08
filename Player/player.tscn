@@ -132,6 +132,7 @@ use_parent_material = true
 position = Vector2(-39, -4)
 
 [node name="ParticleCollisionWall" parent="." instance=ExtResource("4_gwnis")]
+visibility_layer = 1
 
 [node name="Marker2D" type="Marker2D" parent="."]
 use_parent_material = true
