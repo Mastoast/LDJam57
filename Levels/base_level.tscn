@@ -149,11 +149,11 @@ baseDashForce = 200.0
 
 [node name="Map" parent="." instance=ExtResource("6_6jk1m")]
 
-[node name="LightOccluder2D38" parent="Map/Occluders" index="32"]
-position = Vector2(457, -323)
+[node name="LightOccluder2D38" parent="Map/Occluders" index="31"]
+position = Vector2(457, -383)
 
-[node name="LightOccluder2D39" parent="Map/Occluders" index="33"]
-position = Vector2(-671, -323)
+[node name="LightOccluder2D39" parent="Map/Occluders" index="32"]
+position = Vector2(-671, -383)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
