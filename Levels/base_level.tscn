@@ -213,6 +213,10 @@ player_dash = 1.0
 player_big_dash = 2.0
 
 [node name="SkyEntrance" parent="." instance=ExtResource("3_2ed4s")]
+use_parent_material = true
+
+[node name="Sky" parent="SkyEntrance" index="0"]
+visibility_layer = 2
 
 [node name="Player" parent="." instance=ExtResource("3_ruyyf")]
 position = Vector2(0, -1574)
@@ -304,6 +308,7 @@ script = ExtResource("13_4mi1v")
 [connection signal="emit_little_sonar" from="MusicListener" to="Player" method="_onSonar"]
 [connection signal="move_ship" from="MusicListener" to="Player" method="_dash"]
 
+[editable path="SkyEntrance"]
 [editable path="Map"]
 [editable path="Map/Occluders"]
 [editable path="BackObjectsWhite"]

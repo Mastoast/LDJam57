@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ti6gbyf1t2hf"]
+[gd_scene load_steps=6 format=3 uid="uid://ti6gbyf1t2hf"]
 
 [ext_resource type="Texture2D" uid="uid://c8s3sirtpx8r1" path="res://Assets/Textures/rubble.png" id="1_rjcq7"]
 [ext_resource type="Script" uid="uid://c646ddpdmigpw" path="res://Assets/Particles/particle_collision_wall.gd" id="2_lxcxp"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kui5v"]
+light_mode = 1
 
 [sub_resource type="Curve" id="Curve_lxcxp"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.738981), 0.0, 0.0, 0, 0]
@@ -13,7 +16,7 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="CPUParticles2D" type="CPUParticles2D"]
 visibility_layer = 3
-use_parent_material = true
+material = SubResource("CanvasItemMaterial_kui5v")
 emitting = false
 amount = 3
 texture = ExtResource("1_rjcq7")
