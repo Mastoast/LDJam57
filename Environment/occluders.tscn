@@ -94,7 +94,7 @@ polygon = PackedVector2Array(441.5, 823.1, 441.5, 824.5, 416.7, 824.5, 412.7, 84
 polygon = PackedVector2Array(176.5, 837.4, 176.5, 842.3, 185, 861.5, 185.7, 861.5, 186.5, 867.2, 186.5, 869.4, 156.4, 902.5, 154.9, 902.5, 149.5, 921.8, 149.5, 925.6, 185.1, 923.5, 211.4, 923.5, 196.9, 894.5, 202.5, 858.1, 202.5, 852.1)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xce7x"]
-polygon = PackedVector2Array(4.01401, 2.73022, -1, -450, 47.014, -448.558, 45.014, 3.88367)
+polygon = PackedVector2Array(3, 14.25, -1, -450, 47.014, -448.558, 47.5, 17)
 
 [node name="Occluders" type="Node2D"]
 use_parent_material = true
@@ -348,26 +348,18 @@ scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_7t1d4")
 occluder_light_mask = 24
 
-[node name="LightOccluder2D37" type="LightOccluder2D" parent="."]
-light_mask = 0
-visibility_layer = 0
-position = Vector2(1516, 3523)
-scale = Vector2(4, 4)
-occluder = SubResource("OccluderPolygon2D_xce7x")
-occluder_light_mask = 24
-
 [node name="LightOccluder2D38" type="LightOccluder2D" parent="."]
 light_mask = 0
 visibility_layer = 0
-position = Vector2(1516, 3523)
+position = Vector2(1516, 3212)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_xce7x")
-occluder_light_mask = 24
+occluder_light_mask = 7
 
 [node name="LightOccluder2D39" type="LightOccluder2D" parent="."]
 light_mask = 0
 visibility_layer = 0
-position = Vector2(-1080, 3523)
+position = Vector2(-1080, 3212)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_xce7x")
-occluder_light_mask = 24
+occluder_light_mask = 7
