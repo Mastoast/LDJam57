@@ -33,4 +33,4 @@ func on_beat_lvl2(beat_count:int):
 	elif beat_count % 4 == 2:
 		emit_big_sonar.emit(MusicPlayer.beat_length)
 	else:
-		move_ship.emit(player_dash, MusicPlayer.beat_length)
+		move_ship.emit(player_big_dash, MusicPlayer.beat_length)
