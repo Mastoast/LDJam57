@@ -149,6 +149,12 @@ baseDashForce = 200.0
 
 [node name="Map" parent="." instance=ExtResource("6_6jk1m")]
 
+[node name="LightOccluder2D38" parent="Map/Occluders" index="32"]
+position = Vector2(457, -323)
+
+[node name="LightOccluder2D39" parent="Map/Occluders" index="33"]
+position = Vector2(-671, -323)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_wf03h"),
@@ -157,9 +163,22 @@ libraries = {
 
 [node name="BackObjectsWhite" parent="." instance=ExtResource("12_wf03h")]
 
+[node name="Sprite2D" parent="BackObjectsWhite" index="42"]
+position = Vector2(141, 6926)
+
+[node name="Sprite2D2" parent="BackObjectsWhite" index="43"]
+position = Vector2(141, 6926)
+
+[node name="Sprite2D45" parent="BackObjectsWhite" index="44"]
+position = Vector2(141, 6926)
+
 [node name="BackObjectsRed" parent="." instance=ExtResource("13_2ed4s")]
 
+[node name="PoissonDeLaFin" parent="BackObjectsRed" index="7"]
+position = Vector2(1032, 6523)
+
 [node name="Parallax2D" parent="." instance=ExtResource("11_wf03h")]
+scroll_offset = Vector2(0, 550)
 
 [node name="GrottoBackParallaxVisible" type="Sprite2D" parent="Parallax2D"]
 modulate = Color(1, 1, 1, 0.337255)
@@ -181,3 +200,6 @@ texture = ExtResource("7_npxkb")
 [connection signal="move_ship" from="MusicListener" to="Player" method="_dash"]
 
 [editable path="Map"]
+[editable path="Map/Occluders"]
+[editable path="BackObjectsWhite"]
+[editable path="BackObjectsRed"]

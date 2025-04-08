@@ -31,5 +31,5 @@ void fragment() {
 
     COLOR.rgb = glow_color.rgb * intensity * max_intensity;
     //EMISSION = COLOR;
-    COLOR.a = glow_color.a * intensity;
+    COLOR.a = glow_color.a * intensity* max_intensity;
 }
