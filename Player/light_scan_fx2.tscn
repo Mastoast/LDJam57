@@ -15,7 +15,7 @@ shadow_item_cull_mask = 24
 
 [node name="PointLight2DBack" parent="." index="1"]
 light_mask = 16
-visibility_layer = 24
+visibility_layer = 16
 color = Color(0.627451, 0.572549, 0.992157, 1)
 range_item_cull_mask = 16
 shadow_item_cull_mask = 16

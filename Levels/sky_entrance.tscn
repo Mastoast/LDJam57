@@ -14,6 +14,8 @@ scale = Vector2(65.44, 15.72)
 texture = ExtResource("1_fa41u")
 
 [node name="EntranceLight" type="PointLight2D" parent="."]
+light_mask = 2
+visibility_layer = 2
 position = Vector2(-185.577, -326.482)
 rotation = 1.5708
 scale = Vector2(6.42947, 2.32391)

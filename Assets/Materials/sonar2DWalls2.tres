@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cw7hh4s5lcuxn"]
+
+[ext_resource type="Shader" uid="uid://bs8ke2dcws2bg" path="res://Assets/Materials/sonar2D.gdshader" id="1_65buv"]
+
+[resource]
+shader = ExtResource("1_65buv")
+shader_parameter/fade_radius = 15.0
+shader_parameter/max_intensity = 2.0
+shader_parameter/player_position = Vector2(0, 0)
+shader_parameter/noise_scale = 0.5
+shader_parameter/max_distance = 2000.0
+shader_parameter/pulse_time = 2.0
+shader_parameter/time = -1.0

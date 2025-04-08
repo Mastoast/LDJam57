@@ -8,7 +8,6 @@ light_mask = 0
 visibility_layer = 0
 
 [node name="PointLight2DWalls" parent="." instance=ExtResource("1_d2naj")]
-visible = true
 modulate = Color(1, 1, 1, 0.490196)
 color = Color(0.992157, 0.572549, 0.937255, 1)
 energy = 2.0

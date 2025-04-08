@@ -1,15 +1,17 @@
-[gd_scene load_steps=32 format=4 uid="uid://brtkqmlu6ql84"]
+[gd_scene load_steps=34 format=4 uid="uid://brtkqmlu6ql84"]
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
 [ext_resource type="PackedScene" uid="uid://bq38f2ek6wl00" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
 [ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="3_ruyyf"]
+[ext_resource type="Material" uid="uid://cw7hh4s5lcuxn" path="res://Assets/Materials/sonar2DWalls2.tres" id="6_4mi1v"]
 [ext_resource type="PackedScene" uid="uid://bjpcwi3pflktf" path="res://Levels/map.tscn" id="6_6jk1m"]
 [ext_resource type="Texture2D" uid="uid://20yxdlcmgsxg" path="res://Assets/Textures/map/map_fond.png" id="7_npxkb"]
 [ext_resource type="Texture2D" uid="uid://cfr2mymxncrgc" path="res://Assets/Textures/Fish/Poisson de la fin.png" id="11_6jk1m"]
 [ext_resource type="Material" uid="uid://cpd1lmu1c45sj" path="res://Assets/Materials/sonar2D.tres" id="11_ealwv"]
 [ext_resource type="PackedScene" uid="uid://ynx4yyvsthry" path="res://Levels/save background objets placement/parallax_2d.tscn" id="11_wf03h"]
 [ext_resource type="Texture2D" uid="uid://cebxqjbvqt4xt" path="res://Assets/Textures/BackObjects/atlantis_back.png" id="12_2ed4s"]
+[ext_resource type="Material" uid="uid://cnkgctn1h8udm" path="res://Assets/Materials/sonar2D2.tres" id="12_8ftg7"]
 [ext_resource type="PackedScene" uid="uid://dyg5ow1ayujjf" path="res://Levels/save background objets placement/back_objects.tscn" id="12_wf03h"]
 [ext_resource type="PackedScene" uid="uid://iwcd2o8485vw" path="res://Levels/save background objets placement/back_objects_2.tscn" id="13_2ed4s"]
 [ext_resource type="Script" uid="uid://qqfhydc5ltjf" path="res://Levels/meshScan.gd" id="13_4mi1v"]
@@ -108,6 +110,7 @@ _surfaces = [{
 [node name="BaseLevel" type="Node2D"]
 material = SubResource("CanvasItemMaterial_n4mxg")
 script = ExtResource("1_2kef7")
+intro_enabled = false
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -210,6 +213,9 @@ baseDashForce = 200.0
 
 [node name="Map" parent="." instance=ExtResource("6_6jk1m")]
 
+[node name="MapRed" parent="Map" index="3"]
+material = ExtResource("6_4mi1v")
+
 [node name="LightOccluder2D38" parent="Map/Occluders" index="31"]
 position = Vector2(457, -383)
 
@@ -241,12 +247,13 @@ texture = ExtResource("7_npxkb")
 [node name="PoissonDeLaFin" type="MeshInstance2D" parent="."]
 light_mask = 8
 visibility_layer = 8
-material = ExtResource("11_ealwv")
+material = ExtResource("12_8ftg7")
 use_parent_material = true
 position = Vector2(466, 6736)
 mesh = SubResource("ArrayMesh_2kef7")
 texture = ExtResource("11_6jk1m")
 script = ExtResource("13_4mi1v")
+organic = true
 
 [node name="Sprite2D" type="MeshInstance2D" parent="."]
 material = ExtResource("11_ealwv")

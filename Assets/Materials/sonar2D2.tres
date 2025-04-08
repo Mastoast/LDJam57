@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cnkgctn1h8udm"]
+
+[ext_resource type="Shader" uid="uid://bs8ke2dcws2bg" path="res://Assets/Materials/sonar2D.gdshader" id="1_rh5ec"]
+[ext_resource type="Texture2D" uid="uid://vn6xthqbb5iu" path="res://Assets/Textures/Noise.jpg" id="2_sgcsa"]
+
+[resource]
+shader = ExtResource("1_rh5ec")
+shader_parameter/fade_radius = 15.0
+shader_parameter/max_intensity = 0.4
+shader_parameter/player_position = Vector2(0, 0)
+shader_parameter/noise_tex = ExtResource("2_sgcsa")
+shader_parameter/noise_scale = 0.5
+shader_parameter/max_distance = 1500.0
+shader_parameter/pulse_time = 2.0
+shader_parameter/time = -1.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cirkva4eojwhw"]
+[gd_scene load_steps=14 format=3 uid="uid://cirkva4eojwhw"]
 
 [ext_resource type="Script" uid="uid://1jkvvmcd0wrd" path="res://Player/player.gd" id="1_axnn4"]
 [ext_resource type="Texture2D" uid="uid://dgdk1nodh2edr" path="res://Assets/Textures/sous-marin.png" id="2_gwnis"]
@@ -8,6 +8,10 @@
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k53q1"]
 light_mode = 1
+
+[sub_resource type="Curve" id="Curve_k53q1"]
+_data = [Vector2(0, 0), 0.0, 2.96293, 0, 0, Vector2(1, 1), 0.122675, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gwnis"]
 radius = 21.0238
@@ -90,10 +94,20 @@ _data = {
 &"bump": SubResource("Animation_k53q1")
 }
 
+[sub_resource type="Gradient" id="Gradient_k53q1"]
+offsets = PackedFloat32Array(0.411683, 0.609179, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fhl08"]
+gradient = SubResource("Gradient_k53q1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 material = SubResource("CanvasItemMaterial_k53q1")
 motion_mode = 1
 script = ExtResource("1_axnn4")
+moveCurve = SubResource("Curve_k53q1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 use_parent_material = true
@@ -107,6 +121,7 @@ shape = SubResource("CircleShape2D_gwnis")
 [node name="Camera2D" type="Camera2D" parent="."]
 process_callback = 0
 position_smoothing_enabled = true
+position_smoothing_speed = 2.0
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
@@ -135,5 +150,23 @@ libraries = {
 
 [node name="FishMarker" type="Marker2D" parent="."]
 position = Vector2(-284, 72)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.992157, 0.572549, 0.937255, 1)
+blend_mode = 2
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_fhl08")
+texture_scale = 25.0
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+light_mask = 8
+visibility_layer = 8
+color = Color(0.627451, 0.572549, 0.992157, 1)
+blend_mode = 2
+range_item_cull_mask = 8
+shadow_enabled = true
+shadow_item_cull_mask = 8
+texture = SubResource("GradientTexture2D_fhl08")
+texture_scale = 25.0
 
 [connection signal="timeout" from="Timer" to="." method="_onDashFinished"]

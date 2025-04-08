@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://iwcd2o8485vw"]
 
-[ext_resource type="Material" uid="uid://cpd1lmu1c45sj" path="res://Assets/Materials/sonar2D.tres" id="1_c3m2s"]
+[ext_resource type="Material" uid="uid://cnkgctn1h8udm" path="res://Assets/Materials/sonar2D2.tres" id="1_k7ccj"]
 [ext_resource type="Script" uid="uid://qqfhydc5ltjf" path="res://Levels/meshScan.gd" id="2_ascgg"]
 [ext_resource type="Texture2D" uid="uid://cb845133vmurf" path="res://Assets/Textures/Fish/poisson 1.png" id="3_hcyrl"]
 
@@ -23,9 +23,10 @@ modulate = Color(1, 1, 1, 0.490196)
 light_mask = 8
 visibility_layer = 8
 z_index = -1
-material = ExtResource("1_c3m2s")
+material = ExtResource("1_k7ccj")
 scroll_scale = Vector2(0.5, 0.8)
 script = ExtResource("2_ascgg")
+organic = true
 
 [node name="Sprite2D7" type="MeshInstance2D" parent="."]
 light_mask = 8
