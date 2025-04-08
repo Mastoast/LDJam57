@@ -23,6 +23,9 @@ func _ready() -> void:
 	else:
 		start_level()
 
+func _process(_delta) -> void:
+	$Control.position = $Player.position
+
 func start_level():
 	MusicPlayer.play(MusicPlayer.music_80bpm, pitch)
 
@@ -71,4 +74,4 @@ func _on_end_cutscene_trigger(body: Node2D):
 
 func _write_text(text, label_name):
 	var get_label = get_node("control/"+label_name)
-	get_label.text = Text.texts[text] 
+	get_label.text = Text.texts[text]
