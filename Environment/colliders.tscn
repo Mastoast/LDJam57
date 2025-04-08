@@ -87,3 +87,15 @@ polygon = PackedVector2Array(325.1, 826.7, 280, 864.6, 280, 869.1, 321, 918, 321
 
 [node name="CollisionPolygon2D30" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(168, 825.5, 165, 827.3, 165, 831.7, 180.7, 866.1, 151.7, 898, 149.8, 898, 142, 924.6, 142, 932.1, 209.1, 929, 223.1, 929, 203.3, 894.1, 209, 858.2, 209, 849.3)
+
+[node name="CollisionPolygon2D31" type="CollisionPolygon2D" parent="."]
+position = Vector2(-443.25, -962.25)
+polygon = PackedVector2Array(173, 4.6403, 166.832, -210.79, 164.222, -301.957, 160, -449.419, 214, -450, 216, 1)
+
+[node name="CollisionPolygon2D32" type="CollisionPolygon2D" parent="."]
+position = Vector2(-721.25, -963.5)
+polygon = PackedVector2Array(173, 4.6403, 160, -449.419, 214, -450, 216, 1)
+
+[node name="CollisionPolygon2D33" type="CollisionPolygon2D" parent="."]
+position = Vector2(-535.25, -1196.75)
+polygon = PackedVector2Array(-35.5, -335.5, 323.75, -347.75, 326.75, -156.5, -37, -152)
