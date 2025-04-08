@@ -1,6 +1,6 @@
 extends Node
 
-var texts= {
+var texts:Dictionary = {
 "text1_1" : "Here we go, today is the day, we're going to find it.",
 "text1_2" : "I hope you are not mistaken, our funds are getting low.",
 "text2_1" : "We can't see anything, let's start the sonar.",

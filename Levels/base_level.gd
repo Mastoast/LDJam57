@@ -69,6 +69,10 @@ func _on_end_cutscene_trigger(body: Node2D):
 		$AnimationPlayer.play("base_level/final_cutscene")
 		$"Dialogue boxes/Dialogue 7 trigger".collision_mask = 0
 
-func _write_text(text, label_name):
-	var get_label = get_node("control/"+label_name)
+func _write_text(text:String, label_name:String):
+	var get_label = get_node("Control/"+label_name)
 	get_label.text = Text.texts[text]
+
+func clear_label_text():
+	$Control/LabelCharacter1.text = ""
+	$Control/LabelCharacter2.text = ""
