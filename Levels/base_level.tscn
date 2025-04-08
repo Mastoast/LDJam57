@@ -1,8 +1,8 @@
 [gd_scene load_steps=22 format=3 uid="uid://brtkqmlu6ql84"]
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
-[ext_resource type="PackedScene" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
-[ext_resource type="PackedScene" path="res://Player/music_listener.tscn" id="3_n4mxg"]
+[ext_resource type="PackedScene" uid="uid://bq38f2ek6wl00" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
+[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="3_ruyyf"]
 [ext_resource type="PackedScene" uid="uid://bjpcwi3pflktf" path="res://Levels/map.tscn" id="6_6jk1m"]
 [ext_resource type="Texture2D" uid="uid://20yxdlcmgsxg" path="res://Assets/Textures/map/map_fond.png" id="7_npxkb"]
@@ -148,16 +148,6 @@ position = Vector2(0, -144)
 baseDashForce = 200.0
 
 [node name="Map" parent="." instance=ExtResource("6_6jk1m")]
-
-[node name="Polygon2D2" type="Polygon2D" parent="Map"]
-position = Vector2(-701, -325.963)
-scale = Vector2(1, 3.44008)
-polygon = PackedVector2Array(-1, 1.15207, -1, -450, 214, -450, 216, 1)
-
-[node name="Polygon2D" type="Polygon2D" parent="Map"]
-position = Vector2(447.986, -324.468)
-scale = Vector2(1, 3.46785)
-polygon = PackedVector2Array(-0.986176, 1.00006, -1, -450, 214, -450, 216, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
