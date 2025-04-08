@@ -111,9 +111,9 @@ _surfaces = [{
 }]
 
 [node name="BaseLevel" type="Node2D"]
+modulate = Color(0, 0, 0, 1)
 material = SubResource("CanvasItemMaterial_n4mxg")
 script = ExtResource("1_2kef7")
-intro_enabled = false
 
 [node name="Control" type="Control" parent="."]
 z_index = 2

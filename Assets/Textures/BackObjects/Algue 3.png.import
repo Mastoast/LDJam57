@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/Algue 3.png-7125a740fa38381ce1c0aafa7bdf7558.
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

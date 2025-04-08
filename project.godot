@@ -13,7 +13,6 @@ config_version=5
 config/name="LDJam57"
 run/main_scene="uid://nylpp1ynvhvq"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://Assets/Textures/icon.svg"
 
 [autoload]
 

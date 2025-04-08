@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/map rouge.png-db93c2d780f25c849d0e0af0410b40d
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
