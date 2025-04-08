@@ -39,14 +39,12 @@ func _on_first_sonar_activation(body: Node2D):
 
 func _on_dialogue_3(body: Node2D):
 	if body.is_in_group("Player"):
-		$DialogueAudioStreamPlayer.stream = dialogue3
-		$DialogueAudioStreamPlayer.play()
+		$AnimationPlayer.play("base_level/dialogue_wreck")
 		$"Dialogue boxes/Dialogue 3 trigger".collision_mask = 0
 
 func _on_dialogue_4(body: Node2D):
 	if body.is_in_group("Player"):
-		$DialogueAudioStreamPlayer.stream = dialogue4
-		$DialogueAudioStreamPlayer.play()
+		$AnimationPlayer.play("base_level/wimp_dialogue")
 		$"Dialogue boxes/Dialogue 4 trigger".collision_mask = 0
 
 func _on_second_sonar_activation(body: Node2D):
@@ -58,8 +56,7 @@ func _on_second_sonar_activation(body: Node2D):
 
 func _on_dialogue_6(body: Node2D):
 	if body.is_in_group("Player"):
-		$DialogueAudioStreamPlayer.stream = dialogue6
-		$DialogueAudioStreamPlayer.play()
+		$AnimationPlayer.play("base_level/are_you_sure_dialogue")
 		$"Dialogue boxes/Dialogue 6 trigger".collision_mask = 0
 
 func _on_end_cutscene_trigger(body: Node2D):
