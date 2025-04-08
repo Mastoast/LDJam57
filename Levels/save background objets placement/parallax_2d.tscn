@@ -12,8 +12,8 @@ scroll_scale = Vector2(0.5, 0.1)
 [node name="GrottoBackParallaxSonar" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.337255)
 light_mask = 4
+visibility_layer = 4
 z_index = -2
 use_parent_material = true
-position = Vector2(828, 2245)
 scale = Vector2(2, 2)
 texture = ExtResource("1_nssow")

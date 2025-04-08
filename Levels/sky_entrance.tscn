@@ -8,15 +8,15 @@
 [node name="Sky" type="Sprite2D" parent="."]
 light_mask = 2
 use_parent_material = true
-position = Vector2(40, -373)
+position = Vector2(4.65661e-10, -1860)
 rotation = 1.5708
-scale = Vector2(30, 50)
+scale = Vector2(65.44, 15.72)
 texture = ExtResource("1_fa41u")
 
 [node name="EntranceLight" type="PointLight2D" parent="."]
 position = Vector2(-185.577, -326.482)
 rotation = 1.5708
-scale = Vector2(3.66947, 2.32391)
+scale = Vector2(6.42947, 2.32391)
 energy = 2.5
 blend_mode = 2
 range_item_cull_mask = 2
