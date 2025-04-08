@@ -15,6 +15,5 @@ light_mask = 4
 visibility_layer = 4
 z_index = -2
 use_parent_material = true
-position = Vector2(828, 2245)
 scale = Vector2(2, 2)
 texture = ExtResource("1_nssow")
