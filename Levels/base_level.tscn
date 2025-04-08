@@ -51,22 +51,26 @@ intro_enabled = false
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 10.0
+offset_top = -545.0
+offset_right = 10.0
+offset_bottom = -545.0
+metadata/_edit_use_anchors_ = true
 
 [node name="LabelCharacter1" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = -248.0
-offset_top = -277.0
-offset_right = 213.0
-offset_bottom = -223.0
+offset_left = -140.0
+offset_top = -139.0
+offset_right = 321.0
+offset_bottom = -85.0
 
 [node name="LabelCharacter2" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_left = -193.0
-offset_top = -230.0
-offset_right = 224.0
-offset_bottom = -170.0
+offset_left = -85.0
+offset_top = -92.0
+offset_right = 332.0
+offset_bottom = -32.0
+metadata/_edit_use_anchors_ = true
 
 [node name="DialogueAudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1462, 3910)
