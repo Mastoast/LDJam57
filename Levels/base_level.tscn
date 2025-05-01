@@ -261,33 +261,30 @@ texture = ExtResource("7_npxkb")
 light_mask = 8
 visibility_layer = 8
 material = ExtResource("12_8ftg7")
-use_parent_material = true
-position = Vector2(466, 6736)
+position = Vector2(1107, 7257)
+rotation = -0.236592
 mesh = SubResource("ArrayMesh_2kef7")
 texture = ExtResource("11_6jk1m")
 script = ExtResource("13_4mi1v")
 organic = true
 
-[node name="Sprite2D" type="MeshInstance2D" parent="."]
+[node name="CityPart" type="MeshInstance2D" parent="."]
 material = ExtResource("11_ealwv")
-use_parent_material = true
-position = Vector2(130, 6931)
+position = Vector2(173, 7604)
 mesh = SubResource("ArrayMesh_4mi1v")
 texture = ExtResource("12_2ed4s")
 script = ExtResource("13_4mi1v")
 
-[node name="Sprite2D2" type="MeshInstance2D" parent="."]
+[node name="CityPart2" type="MeshInstance2D" parent="."]
 material = ExtResource("11_ealwv")
-use_parent_material = true
-position = Vector2(130, 6931)
+position = Vector2(173, 7604)
 mesh = SubResource("ArrayMesh_8ftg7")
 texture = ExtResource("13_mqdjw")
 script = ExtResource("13_4mi1v")
 
-[node name="Sprite2D45" type="MeshInstance2D" parent="."]
+[node name="CityPart3" type="MeshInstance2D" parent="."]
 material = ExtResource("11_ealwv")
-use_parent_material = true
-position = Vector2(130, 6931)
+position = Vector2(173, 7604)
 mesh = SubResource("ArrayMesh_x3nl1")
 texture = ExtResource("14_ealwv")
 script = ExtResource("13_4mi1v")
