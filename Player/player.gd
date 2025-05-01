@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 			get_parent().add_child(newParticle)
 			newParticle.global_position = collision.get_position()
 			newParticle.restart()
-			position = latestPosition
+			position = (position + latestPosition) / 2
 			$AnimationPlayer.play("bump", -1, 2)
 
 func _get_position():
