@@ -87,193 +87,193 @@ occluder = SubResource("OccluderPolygon2D_onmpa")
 occluder_light_mask = 3
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_3wosu")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_kqvnq")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_aq05v")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_ux207")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_5ssqh")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D6" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_hxilp")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D7" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_ila2v")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D8" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_41uyd")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D10" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_5anci")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D11" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_3hp0s")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D12" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_yao48")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D13" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_qc8lq")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D14" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_6bhp2")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D15" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_floru")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D16" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_x6ymr")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D17" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_o4x08")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D18" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_dv2w2")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D20" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_xnvai")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D21" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_8ep8v")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D22" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3520)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_cabr0")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D23" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_o06q3")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D24" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_pd3yi")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D26" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_ys1yd")
-occluder_light_mask = 8
+occluder_light_mask = 24
 
 [node name="LightOccluder2D28" type="LightOccluder2D" parent="."]
-light_mask = 8
-visibility_layer = 8
+light_mask = 24
+visibility_layer = 24
 position = Vector2(1535, 3516)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_v8al7")
-occluder_light_mask = 8
+occluder_light_mask = 24
