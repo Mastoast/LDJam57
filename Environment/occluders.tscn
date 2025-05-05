@@ -84,7 +84,7 @@ visibility_layer = 3
 position = Vector2(1535, 3519)
 scale = Vector2(4, 4)
 occluder = SubResource("OccluderPolygon2D_onmpa")
-occluder_light_mask = 3
+occluder_light_mask = 7
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 light_mask = 24
