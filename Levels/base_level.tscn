@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
 [ext_resource type="PackedScene" uid="uid://bq38f2ek6wl00" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
-[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
+[ext_resource type="PackedScene" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="3_ruyyf"]
 [ext_resource type="Material" uid="uid://cw7hh4s5lcuxn" path="res://Assets/Materials/sonar2DWalls2.tres" id="6_4mi1v"]
 [ext_resource type="PackedScene" uid="uid://bjpcwi3pflktf" path="res://Levels/map.tscn" id="6_6jk1m"]
@@ -152,36 +152,42 @@ playback_type = 1
 [node name="Dialogue boxes" type="Node" parent="."]
 
 [node name="Dialogue 2 trigger" type="Area2D" parent="Dialogue boxes"]
+position = Vector2(-5, 566)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue boxes/Dialogue 2 trigger"]
 position = Vector2(-72.5, 764)
 shape = SubResource("RectangleShape2D_6jk1m")
 
 [node name="Dialogue 3 trigger" type="Area2D" parent="Dialogue boxes"]
+position = Vector2(-45, 647)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue boxes/Dialogue 3 trigger"]
 position = Vector2(-45, 1612.13)
 shape = SubResource("RectangleShape2D_2kef7")
 
 [node name="Dialogue 4 trigger" type="Area2D" parent="Dialogue boxes"]
+position = Vector2(0, 138)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue boxes/Dialogue 4 trigger"]
 position = Vector2(3295, 2238)
 shape = SubResource("RectangleShape2D_wf03h")
 
 [node name="Dialogue 5 trigger" type="Area2D" parent="Dialogue boxes"]
+position = Vector2(49, -293)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue boxes/Dialogue 5 trigger"]
 position = Vector2(2321.5, 3736)
 shape = SubResource("RectangleShape2D_2ed4s")
 
 [node name="Dialogue 6 trigger" type="Area2D" parent="Dialogue boxes"]
+position = Vector2(687, 612)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue boxes/Dialogue 6 trigger"]
 position = Vector2(2067.5, 4699.5)
 shape = SubResource("RectangleShape2D_mqdjw")
 
 [node name="Dialogue 7 trigger" type="Area2D" parent="Dialogue boxes"]
+position = Vector2(594, 513)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue boxes/Dialogue 7 trigger"]
 position = Vector2(87.2188, 6805.44)
@@ -236,8 +242,10 @@ libraries = {
 }
 
 [node name="BackObjectsWhite" parent="." instance=ExtResource("12_wf03h")]
+scroll_offset = Vector2(0, 511)
 
 [node name="BackObjectsRed" parent="." instance=ExtResource("13_2ed4s")]
+scroll_offset = Vector2(0, 551)
 
 [node name="Sprite2D6" parent="BackObjectsRed" index="1"]
 position = Vector2(2006, 6710)
@@ -253,15 +261,15 @@ modulate = Color(1, 1, 1, 0.337255)
 light_mask = 2
 z_index = -2
 use_parent_material = true
-position = Vector2(828, 2245)
-scale = Vector2(2, 2)
+position = Vector2(1332.5, 4010)
+scale = Vector2(3.67014, 2.66563)
 texture = ExtResource("7_npxkb")
 
 [node name="PoissonDeLaFin" type="MeshInstance2D" parent="."]
 light_mask = 8
 visibility_layer = 8
 material = ExtResource("12_8ftg7")
-position = Vector2(1107, 7257)
+position = Vector2(1476, 7205.88)
 rotation = -0.236592
 mesh = SubResource("ArrayMesh_2kef7")
 texture = ExtResource("11_6jk1m")
@@ -270,21 +278,21 @@ organic = true
 
 [node name="CityPart" type="MeshInstance2D" parent="."]
 material = ExtResource("11_ealwv")
-position = Vector2(173, 7604)
+position = Vector2(542, 7552.88)
 mesh = SubResource("ArrayMesh_4mi1v")
 texture = ExtResource("12_2ed4s")
 script = ExtResource("13_4mi1v")
 
 [node name="CityPart2" type="MeshInstance2D" parent="."]
 material = ExtResource("11_ealwv")
-position = Vector2(173, 7604)
+position = Vector2(542, 7552.88)
 mesh = SubResource("ArrayMesh_8ftg7")
 texture = ExtResource("13_mqdjw")
 script = ExtResource("13_4mi1v")
 
 [node name="CityPart3" type="MeshInstance2D" parent="."]
 material = ExtResource("11_ealwv")
-position = Vector2(173, 7604)
+position = Vector2(542, 7552.88)
 mesh = SubResource("ArrayMesh_x3nl1")
 texture = ExtResource("14_ealwv")
 script = ExtResource("13_4mi1v")
