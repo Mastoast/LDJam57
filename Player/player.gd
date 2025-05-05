@@ -26,6 +26,7 @@ var sonarLight2 = load("res://Player/light_scan_fx2.tscn")
 
 #region SIGNALS
 signal setSonarPulseTime
+signal setSonarTwoPulseTime
 signal sendSonarWithTime
 signal sendSonarTwoWithTime
 #endregion
@@ -87,9 +88,11 @@ func _processOnSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
 	
 	var sLprefab = sonarLight
 	var sendSonarTime = sendSonarWithTime
+	var setPulseTime = setSonarPulseTime
 	if isOrganic:
 		sLprefab = sonarLight2
 		sendSonarTime = sendSonarTwoWithTime
+		setPulseTime = setSonarTwoPulseTime
 	var sL = sLprefab.instantiate()
 	print_debug(sL.name)
 	
@@ -108,11 +111,11 @@ func _processOnSonar(isOrganic : bool = false, speedMult : float = 1) -> void:
 	sonarTween.connect("finished", func() -> void: sL.queue_free())
 	
 	var sonarPulseTween = create_tween()
-	setSonarPulseTime.emit(timer)
+	setPulseTime.emit(timer)
 	sonarPulseTween.tween_method(sendSonarTime.emit, 0.0, timer * .5, timer * .5) ## object based shader fx
 	sonarPulseTween.connect("finished", func() -> void:
 		sendSonarTime.emit(-1.0)
-		setSonarPulseTime.emit(-1.0)
+		setPulseTime.emit(-1.0)
 		)
 	
 	#sonarTween.play()

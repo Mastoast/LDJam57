@@ -9,12 +9,13 @@ var maxD : float
 
 func _ready():
 	player = get_tree().root.get_node("BaseLevel/Player")
+	maxD = SHADER.get_shader_parameter("max_distance")
 	if organic:
 		player.sendSonarTwoWithTime.connect(_processSonarTime)
+		player.setSonarTwoPulseTime.connect(_setSonarPulseTime)
 	else:
 		player.sendSonarWithTime.connect(_processSonarTime)
-	player.setSonarPulseTime.connect(_setSonarPulseTime)
-	maxD = SHADER.get_shader_parameter("max_distance")
+		player.setSonarPulseTime.connect(_setSonarPulseTime)
 
 func _process(_delta):
 	SHADER.set_shader_parameter("player_position", player.global_position)
