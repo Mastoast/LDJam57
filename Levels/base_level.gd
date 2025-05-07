@@ -7,16 +7,16 @@ extends Node2D
 
 var main_menu_path = "res://Levels/Menu.tscn"
 
-var dialogue1 = load("res://Assets/audio/Dialogues/Dialogue 1.wav")
-var dialogue2 = load("res://Assets/audio/Dialogues/Dialogue 2.wav")
-var dialogue3 = load("res://Assets/audio/Dialogues/Dialogue 3.wav")
-var dialogue4 = load("res://Assets/audio/Dialogues/Dialogue 4.wav")
-var dialogue5a = load("res://Assets/audio/Dialogues/Dialogue 5a.wav")
-var dialogue5b = load("res://Assets/audio/Dialogues/Dialogue 5b.wav")
-var dialogue6 = load("res://Assets/audio/Dialogues/Dialogue 6.wav")
-var dialogue7a = load("res://Assets/audio/Dialogues/Dialogue 7a.wav")
-var dialogue7b = load("res://Assets/audio/Dialogues/Dialogue 7b.wav")
-var dialogue7c = load("res://Assets/audio/Dialogues/Dialogue 7c.wav")
+var dialogue1 = preload("res://Assets/audio/Dialogues/Dialogue 1.wav")
+var dialogue2 = preload("res://Assets/audio/Dialogues/Dialogue 2.wav")
+var dialogue3 = preload("res://Assets/audio/Dialogues/Dialogue 3.wav")
+var dialogue4 = preload("res://Assets/audio/Dialogues/Dialogue 4.wav")
+var dialogue5a = preload("res://Assets/audio/Dialogues/Dialogue 5a.wav")
+var dialogue5b = preload("res://Assets/audio/Dialogues/Dialogue 5b.wav")
+var dialogue6 = preload("res://Assets/audio/Dialogues/Dialogue 6.wav")
+var dialogue7a = preload("res://Assets/audio/Dialogues/Dialogue 7a.wav")
+var dialogue7b = preload("res://Assets/audio/Dialogues/Dialogue 7b.wav")
+var dialogue7c = preload("res://Assets/audio/Dialogues/Dialogue 7c.wav")
 
 func _ready() -> void:
 	if intro_enabled :
