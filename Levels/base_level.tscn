@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://34prymo77uoe" path="res://Levels/base_level.gd" id="1_2kef7"]
 [ext_resource type="PackedScene" uid="uid://bq38f2ek6wl00" path="res://Levels/sky_entrance.tscn" id="3_2ed4s"]
-[ext_resource type="PackedScene" path="res://Player/music_listener.tscn" id="3_n4mxg"]
+[ext_resource type="PackedScene" uid="uid://cmbe6p5xvc2kp" path="res://Player/music_listener.tscn" id="3_n4mxg"]
 [ext_resource type="PackedScene" uid="uid://cirkva4eojwhw" path="res://Player/player.tscn" id="3_ruyyf"]
 [ext_resource type="Material" uid="uid://cw7hh4s5lcuxn" path="res://Assets/Materials/sonar2DWalls2.tres" id="6_4mi1v"]
 [ext_resource type="PackedScene" uid="uid://bjpcwi3pflktf" path="res://Levels/map.tscn" id="6_6jk1m"]
@@ -113,6 +113,7 @@ _surfaces = [{
 [node name="BaseLevel" type="Node2D"]
 material = SubResource("CanvasItemMaterial_n4mxg")
 script = ExtResource("1_2kef7")
+pitch_level2 = 0.9
 
 [node name="Control" type="Control" parent="."]
 z_index = 2

@@ -1,6 +1,7 @@
 extends Node2D
 
-@export var pitch:float = 1.0
+@export var pitch_level1:float = 1.0
+@export var pitch_level2:float = 1.0
 @export var fade_delay = 2.0
 @export var intro_enabled = true
 
@@ -27,10 +28,10 @@ func _process(_delta) -> void:
 	$Control.position = $Player.position
 
 func start_level():
-	MusicPlayer.play(MusicPlayer.music_80bpm, pitch)
+	MusicPlayer.play(MusicPlayer.music_80bpm, pitch_level1)
 
 func start_level2():
-	MusicPlayer.play(MusicPlayer.music_glitchy, pitch)
+	MusicPlayer.play(MusicPlayer.music_glitchy, pitch_level2)
 
 func load_main_menu():
 	get_tree().change_scene_to_file(main_menu_path)
