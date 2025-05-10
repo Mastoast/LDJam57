@@ -18,6 +18,9 @@ var dialogue7a = preload("res://Assets/audio/Dialogues/Dialogue 7a.wav")
 var dialogue7b = preload("res://Assets/audio/Dialogues/Dialogue 7b.wav")
 var dialogue7c = preload("res://Assets/audio/Dialogues/Dialogue 7c.wav")
 
+func _enter_tree():
+	modulate = Color(0, 0, 0, 1)
+
 func _ready() -> void:
 	if intro_enabled :
 		$AnimationPlayer.play("base_level/intro")
